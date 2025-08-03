@@ -1,0 +1,118 @@
+:root{
+  --text-color: #000;
+  --link-color: #449DD1;
+  --background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: var(--background-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+}
+
+nav .left h1 {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+nav .right a {
+  color: var(--text-color);
+  font-size: 20px;
+  margin: 0 20px;
+}
+
+nav .right a:hover {
+  color: var(--link-color);
+}
+
+nav .right select {
+  display: none;
+}
+
+/* SECTION 1: Intro */
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 20px 0;
+  gap: 60px;
+}
+
+.intro-section .text {
+  flex: 5;
+}
+
+.intro-section .text h1 {
+  font-family: "Merriweather", sans;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.intro-section .text p {
+  font-size: 18px;
+}
+
+.intro-section .text .highlight {
+  color: #5EA0FD;
+}
+
+.intro-section .text h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.intro-section .links a {
+  color: #fff;
+  background-color: #5EA0FD;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 7px 21px;
+  letter-spacing: 1.8px;
+}
+
+.intro-section .portrait {
+  flex: 2;
+}
+
+.intro-section .portrait img {
+  width: 525px;
+}
+
+@media (max-width: 670px) {
+  /* NAVBAR */
+  nav {
+    padding: 0 20px;
+  }
+
+  nav .right select {
+    display: block;
+  }
+
+  nav .right a {
+    display: none;
+  }
