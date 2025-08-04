@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Brown Sugar';
+  src: url('fonts/brown-sugar.ttf') format('ttf');
+}
+
 :root{
   --text-color: #000;
   --link-color: #449DD1;
@@ -35,7 +40,11 @@ nav {
 
 nav .left h1 {
   color: var(--text-color);
+  font-family: 'Brown Sugar', sans-serif;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 nav .right a {
@@ -59,6 +68,7 @@ nav .right select {
   align-items: center;
   padding: 0 50px;
   margin: 20px 0;
+  margin-bottom: 100px;
   gap: 60px;
 }
 
@@ -71,10 +81,15 @@ nav .right select {
   font-size: 40px;
   font-weight: bold;
   font-style: italic;
+  justify-self: center;
 }
 
 .intro-section .text p {
   font-size: 18px;
+  max-width: 650px;
+  text-align: center;
+  margin-top: 18px;
+  margin: 18px auto 0;
 }
 
 .intro-section .text .highlight {
@@ -84,26 +99,63 @@ nav .right select {
 .intro-section .text h4 {
   font-size: 18px;
   font-weight: bold;
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.intro-section .links a {
+.intro-section .text i {
+  font-size: 29px;
+  display: inline-flex;
+}
+
+.intro-section .text .links {
+  margin-top: 18px;
+  justify-self: center;
+}
+
+.intro-section .text .links a {
   color: #fff;
   background-color: #5EA0FD;
   font-size: 18px;
   border-radius: 10px;
-  padding: 7px 21px;
+  padding: 7px 20px;
   letter-spacing: 1.8px;
+  text-decoration: none;
 }
 
 .intro-section .portrait {
   flex: 2;
+  display: flex;
+  justify-content: right;
 }
 
 .intro-section .portrait img {
   width: 525px;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 850px) {
+  /* SECTION 1: INTRO */
+  .intro-section {
+    flex-direction: column-reverse;
+  }
+
+  .intro-section .portrait img {
+    width: 300px;
+  }
+
+}
+
+@media (max-width: 740px) {
+
+  /* SECTION 1: INTRO */
+  .intro-section .text h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 680px) {
   /* NAVBAR */
   nav {
     padding: 0 20px;
@@ -115,5 +167,14 @@ nav .right select {
 
   nav .right a {
     display: none;
+  }
+
+  /* SECTION 1: INTRO */
+  .intro-section {
+    padding: 0 20px;
+  }
+
+  .intro-section .text h1 {
+    font-size: 28px;
   }
 }
