@@ -5,6 +5,7 @@
 
 :root{
   --text-color: #000;
+  --header-color: #5EA0FD;
   --link-color: #449DD1;
   --background-color: #fff;
 }
@@ -43,7 +44,12 @@ nav .left h1 {
   font-family: 'Brown Sugar', sans-serif;
   font-size: 20px;
   font-style: normal;
+  /* Option 1: */
   font-weight: 400;
+
+  /* Option 2: */
+  /* font-weight: 600;
+  letter-spacing: 1px; */
   line-height: normal;
 }
 
@@ -93,7 +99,7 @@ nav .right select {
 }
 
 .intro-section .text .highlight {
-  color: #5EA0FD;
+  color: var(--header-color);
 }
 
 .intro-section .text h4 {
@@ -117,7 +123,7 @@ nav .right select {
 
 .intro-section .text .links a {
   color: #fff;
-  background-color: #5EA0FD;
+  background-color: var(--header-color);
   font-size: 18px;
   border-radius: 10px;
   padding: 7px 20px;
@@ -133,6 +139,108 @@ nav .right select {
 
 .intro-section .portrait img {
   width: 525px;
+}
+
+/* SECTION 2: Featured Work */
+
+.work-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.work-section .text h3 {
+  color: var(--header-color);
+  font-family: "Merriweather", sans;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.work-section .text h2 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.work-section .cells {
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.work-section .cells .cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 340px;
+  height: 580px;
+  padding: 20px;
+  border: 5px solid var(--text-color);
+  border-radius: 3px;
+  margin: 20px;
+  gap: 5px;
+
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23449DD1" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>') 8 8, pointer;
+}
+
+.work-section .cells .cell .showcase {
+  /* other color options */
+  /* background-color: #f2ede0; */
+  /* background-color: #f9f6f1; */
+
+  background-color: #f5f2eb;
+  width: 297px;
+  height: 337px;
+  border-radius: 3px;
+  /* allows to move phone mockup */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-section .cells .cell .showcase img {
+  width: 117px;
+}
+
+.work-section .cells .cell .text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 297px;
+  gap: 5px;
+}
+
+.work-section .cells .cell .text h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.work-section .cells .cell .text p {
+  font-size: 16px;
+}
+
+.work-section .cells .cell .tags {
+  display: flex;
+  gap: 5px;
+}
+
+.work-section .cells .cell .tag {
+  background-color: var(--header-color);
+  border-radius: 10px;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+}
+
+
+.work-section .cells .cell .text .tags p {
+  color: var(--background-color);
+  font-family: "Merriweather", sans;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
 }
 
 @media (max-width: 850px) {
