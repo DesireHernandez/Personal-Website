@@ -272,12 +272,24 @@ nav .right select {
   height: 530px;
   justify-content: center;
   gap: 135px;
+
+  margin-left: -50px;
+  margin-right: -50px;
+  padding: 0 50px;
 }
 
 .skills-section .display .tech-stack {
   display: flex;
   flex-direction: row;
+  gap: 60px;
+  animation: moveLeft 10s infinite linear;
 }
+
+/* .skills-section .display .tech-stack .language {
+
+  animation: moveLeft 5s infinite linear;
+  flex-wrap: wrap;
+} */
 
 .skills-section .display .tech-stack .language img {
   width: 100px;
@@ -298,6 +310,17 @@ nav .right select {
   content: "✦";
   margin: 0.5rem;
 }
+
+/* ANIMATION */
+@keyframes moveLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-160%);
+  }
+}
+
 
 @media (max-width: 1100px) {
   /* SECTION 2: FEAT. WORK */
