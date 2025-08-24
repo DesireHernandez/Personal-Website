@@ -272,6 +272,7 @@ nav .right select {
   height: 530px;
   justify-content: center;
   gap: 135px;
+  overflow: hidden;
 
   margin-left: -50px;
   margin-right: -50px;
@@ -282,14 +283,14 @@ nav .right select {
   display: flex;
   flex-direction: row;
   gap: 60px;
-  animation: moveLeft 10s infinite linear;
+  padding-right: 60px;
+  /* width: max-content; */
+  width: 2240px;
+
+  animation: moveLeft 10s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
 }
-
-/* .skills-section .display .tech-stack .language {
-
-  animation: moveLeft 5s infinite linear;
-  flex-wrap: wrap;
-} */
 
 .skills-section .display .tech-stack .language img {
   width: 100px;
@@ -297,13 +298,27 @@ nav .right select {
 
 .skills-section .display .skills {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  width: max-content;
+
+  animation: moveLeft 20s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
+}
+
+.skills-section .display .tech-stack .skills:hover {
+  animation-play-state: paused;
 }
 
 .skills-section .display .skills .skill {
   color: var(--background-color);
   font-size: 28px;
   font-weight: bold;
+}
+
+.skills-section .display .skills .skill:first-child::before {
+  content: "✦";
+  margin: 0.5rem;
 }
 
 .skills-section .display .skills .skill:not(:last-child)::after {
@@ -317,7 +332,7 @@ nav .right select {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-160%);
+    transform: translateX(-100%);
   }
 }
 
