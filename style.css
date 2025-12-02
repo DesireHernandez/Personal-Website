@@ -32,12 +32,17 @@ a {
 
 /* NAVBAR */
 nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
   height: 80px;
+
+  /* background-color: violet; */
 }
+
+
 
 nav .left h1 {
   color: var(--text-color);
@@ -179,8 +184,9 @@ nav .right select {
   width: 340px;
   height: 580px;
   padding: 20px;
-  border: 5px solid var(--text-color);
-  border-radius: 3px;
+  border: 4px solid var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   margin: 20px;
   gap: 5px;
 
@@ -275,6 +281,7 @@ nav .right select {
 
 .skills-section .display .language-card {
   border: 3px solid var(--text-color);
+  /* border: 3px solid var(--header-color); */
   padding: 20px;
   text-align: center;
 }
@@ -303,7 +310,8 @@ nav .right select {
 .skills-section .display .language {
   width: 110px;
   height: 110px;
-  background-color: var(--header-color);
+  background-color: var(--text-color);
+  border: 3px solid var(--header-color);
   border-radius: 100%;
   padding: 20px;
   margin: 10px 95px 10px 95px;
@@ -317,7 +325,239 @@ nav .right select {
 
 .skills-section .display .language-card p {
   font-size: 18px;
+  color: var(--text-color);
+}
+
+/* SECTION 4: WORK */
+.experience-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+  position: relative;
+
+  /* background-color: wheat; */
+}
+
+.experience-section .text h3 {
   color: var(--header-color);
+  font-family: "Merriweather", sans;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.experience-section .text h2 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.experience-section .dots-left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+  height: 400px;
+  background-image: url('/images/DottedGrid.png');
+  background-size: contain;
+  opacity: 100%;
+  z-index: 0;
+
+  /* background-color: violet; */
+}
+
+.experience-section .dots-right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 400px;
+  height: 400px;
+  background-image: url('/images/DottedGrid.png');
+  background-size: contain;
+  opacity: 100%;
+  z-index: 0;
+
+  /* background-color: violet; */
+}
+
+.experience-section .experience-cards {
+  position: relative;
+  z-index: 1;
+  margin: 0px 160px;
+
+  /* background-color: #2092e9; */
+}
+
+.experience-section .experience-cards .experience-card {
+  border: 3px solid var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  margin: 50px 0px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  background-color: var(--background-color);
+}
+
+.experience-section .experience-cards .experience-card h3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 28px;
+  font-weight: bold;
+
+  /* background-color: lightcoral; */
+}
+
+.experience-section .experience-cards .experience-card h3 .date {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--header-color);
+  white-space: nowrap; /* Prevents date from breaking */
+
+  /* background-color: lightpink; */
+}
+
+.experience-section .experience-cards .experience-card h4 {
+  font-size: 18px;
+  color: var(--header-color);
+
+  /* background-color: lightgreen; */
+}
+
+.experience-section .experience-cards .experience-card p {
+  font-size: 18px;
+
+  /* background-color: lightgoldenrodyellow; */
+}
+
+.experience-section .experience-cards .experience-card .tags {
+  display: flex;
+  gap: 8px;
+
+  /* background-color: lightgray; */
+}
+
+.experience-section .experience-cards .experience-card .tags .tag {
+  background-color: var(--header-color);
+  border-radius: 10px;
+  padding: 3px 8px;
+  color: var(--background-color);
+  font-family: "Merriweather", sans;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+
+  /* background-color: lightblue; */
+}
+
+/* SECTION 5: ABOUT ME */
+.about-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+
+  /* background-color: #F9DEC9; */
+}
+
+.about-section .text h2 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-section .text h3 {
+  color: var(--header-color);
+  font-family: "Merriweather", sans;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.about-section .cells {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  /* gap: 30px; */
+
+  /* background-color: #685044; */
+}
+
+.about-section .cells .cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-start; */
+  padding: 40px;
+  /* gap: 20px; */
+
+  /* background-color: #50A2A7; */
+}
+
+
+.about-section #about-me h4 {
+  font-family: "Merriweather", sans;
+  font-style: italic;
+  font-size: 28px;
+
+  /* background-color: #FC9F5B; */
+}
+
+.about-section #about-me p {
+  font-size: 18px;
+  font-weight: regular;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+
+  /* background-color: #ECE4B7; */
+}
+
+
+.about-section .cells .cell .hobbie-cards {
+  border: 3px solid var(--text-color);
+  border-radius: 10px;
+  ;
+  padding: 20px;
+  /* margin-top: 20px; */
+
+  /* background-color: #D3DFB8; */
+}
+
+.about-section .cells .cell .hobbie-cards:first-of-type {
+  margin-top: 20px;
+
+  /* background-color: #9B2915; */
+}
+
+.about-section #hobbies h1 {
+  font-family: "Merriweather", sans;
+  font-style: italic;
+  font-size: 28px;
+
+}
+
+.about-section #hobbies h4 {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.about-section #hobbies p {
+  font-size: 18px;
+  font-weight: regular;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.about-section .cells .cell .books img {
+  width: 100%;
+
 }
 
 /* ANIMATION */
