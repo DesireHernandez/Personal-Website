@@ -48,13 +48,11 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
   height: 80px;
-
   background-color: var(--background-color);
 }
 
@@ -86,19 +84,56 @@ nav .right select {
   display: none;
 }
 
+/* SECTION HEADERS */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h3 {
+  color: var(--header-color);
+  font-family: "Merriweather", sans;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.section-header h2 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
 /* SECTION 1: Intro */
 .intro-section {
+  /* old */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 0 50px;
-  margin: 20px 0;
-  margin-bottom: 100px;
+  /* padding: 0 50px; */
+  /* margin: 20px 0; */
+  /* margin-bottom: 100px; */
   gap: 60px;
+
+  /* new */
+  position: relative;
+  /* max-width: 1400px; */
+  margin: 40px auto 120px;
+  padding: 0 80px;
+  justify-content: center;
+
+  /* background-color: violet; */
+
 }
 
 .intro-section .text {
-  flex: 5;
+  /* old */
+  /* flex: 5; */
+
+  /* new */
+  /* flex: 6; */
+  padding: 10px;
+
+  /* background-color: darksalmon; */
 }
 
 .intro-section .text h1 {
@@ -150,12 +185,18 @@ nav .right select {
   text-decoration: none;
 }
 
-.intro-section .portrait {
-  flex: 2;
+/* .intro-section .portrait { */
+  /* old */
+  /* flex: 2;
   display: flex;
   position: relative;
   justify-content: right;
-}
+  flex: 2; */
+  /* new */
+  /* flex: 4;
+
+  background-color: olivedrab;
+} */
 
 .intro-section .portrait img {
   width: 525px;
@@ -166,22 +207,6 @@ nav .right select {
 .work-section {
   padding: 0 50px;
   margin-bottom: 100px;
-}
-
-.work-section .text h3 {
-  color: var(--header-color);
-  font-family: "Merriweather", sans;
-  font-style: italic;
-  font-size: 28px;
-  font-weight: 400;
-  text-align: center;
-}
-
-.work-section .text h2 {
-  font-size: 34px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .work-section .cells {
@@ -270,34 +295,22 @@ nav .right select {
   margin-bottom: 100px;
 }
 
-.skills-section .text h3 {
-  color: var(--header-color);
-  font-family: "Merriweather", sans;
-  font-style: italic;
-  font-size: 28px;
-  font-weight: 400;
-  text-align: center;
-}
-
-.skills-section .text h2 {
-  font-size: 34px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
 .skills-section .display {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  /* padding: 20px; */
+
+  /* background-color: crimson; */
 }
 
 .skills-section .display .language-card {
   border: 3px solid var(--text-color);
-  /* border: 3px solid var(--header-color); */
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
+
+  /* background-color: aqua; */
 }
 
 /* Remove left border from first item in each row */
@@ -339,6 +352,7 @@ nav .right select {
 
 .skills-section .display .language-card p {
   font-size: 18px;
+  /* font-weight: bold; */
   color: var(--text-color);
 }
 
@@ -349,22 +363,6 @@ nav .right select {
   position: relative;
 
   /* background-color: wheat; */
-}
-
-.experience-section .text h3 {
-  color: var(--header-color);
-  font-family: "Merriweather", sans;
-  font-style: italic;
-  font-size: 28px;
-  font-weight: 400;
-  text-align: center;
-}
-
-.experience-section .text h2 {
-  font-size: 34px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .experience-section .dots-left {
@@ -399,6 +397,7 @@ nav .right select {
   position: relative;
   z-index: 1;
   margin: 0px 160px;
+  padding-bottom: 50px;
 
   /* background-color: #2092e9; */
 }
@@ -477,22 +476,6 @@ nav .right select {
   /* background-color: #F9DEC9; */
 }
 
-.about-section .text h2 {
-  font-size: 34px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.about-section .text h3 {
-  color: var(--header-color);
-  font-family: "Merriweather", sans;
-  font-style: italic;
-  font-size: 28px;
-  font-weight: 400;
-  text-align: center;
-}
-
 .about-section .cells {
   display: flex;
   align-items: stretch;
@@ -553,13 +536,21 @@ nav .right select {
   font-family: "Merriweather", sans;
   font-style: italic;
   font-size: 28px;
-
 }
 
 .about-section #hobbies h4 {
   font-size: 18px;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 
+  /* background-color: cadetblue; */
+}
+
+.about-section #hobbies i {
+  font-size: 25px;
+
+  /* background-color: lightgreen; */
 }
 
 .about-section #hobbies p {
@@ -571,21 +562,153 @@ nav .right select {
 
 .about-section .cells .cell .books img {
   width: 100%;
+}
 
+/* SECTION 6: CONTACT */
+.contact-section {
+  padding: 60px 50px 80px;
+  background-color: var(--background-color);
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  background-color: var(--header-color);
+  color: var(--background-color);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600px;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  background-color: var(--link-color);
+}
+
+.contact-link i {
+  font-size: 22px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--header-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 16px;
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 1145px) {
+/* ============================================
+   DESKTOP BREAKPOINTS
+   ============================================ */
+@media (max-width: 1920px) {
+
+  /* SECTION 1: Intro */
+  .intro-section .portrait img {
+    width: 550px;
+  }
+
+  /* SECTION 3: SKILLS */
+  .skills-section .display .language-card {
+    padding: 40px;
+  }
+
+  /* SECTION 4: EXPERIENCE*/
+  .experience-section .dots-left,
+  .experience-section .dots-right {
+    width: 600px;
+    height: 600px;
+  }
+
+}
+
+@media (max-width: 1627px) {
+  /* SECTION 3: SKILLS */
+  .skills-section .display {
+    padding: 0px 20px;
+
+    /* background-color: aquamarine; */
+  }
+
+  .skills-section .display .language-card {
+    box-sizing: border-box;
+    width: 25%;
+    max-width: 25%;
+    justify-items: center;
+
+    /* background-color: darksalmon; */
+  }
+}
+
+@media (max-width: 1536px) {
+
+  /* SECTION: Intro */
+  .intro-section .portrait img {
+    width: 525px;
+  }
+}
+
+@media (max-width: 1400px) {
+
+  /* SECTION 4: EXPERIENCE*/
+  .experience-section .dots-left,
+  .experience-section .dots-right {
+    width: 500px;
+    height: 500px;
+  }
+
+}
+
+@media (max-width: 1225px) {
 
   /* SECTION 1: INTRO */
   .intro-section .text h1 {
     text-align: center;
   }
 
+  .intro-section .portrait img {
+    width: 450px;
+  }
+
 }
 
-/* Laptops */
+
+/* ============================================
+   LAPTOPS BREAKPOINTS
+   ============================================ */
 @media (max-width: 1100px) {
+
+  /* SECTION 1: INTRO */
+  /* .intro-section {
+    flex-direction: column-reverse;
+    gap: 0px;
+  } */
+
+  .intro-section .portrait img {
+    width: 400px;
+  }
 
   /* SECTION 2: FEAT. WORK */
   .work-section .cells {
@@ -593,59 +716,75 @@ nav .right select {
     align-items: center;
   }
 
-   /* SECTION 3: SKILLS */
-  /* Reset borders */
+  /* SECTION 3: SKILLS */
   .skills-section .display .language-card {
-    border: 3px solid var(--text-color);
-    border-top: none;
-    border-bottom: none;
-  }
+    box-sizing: border-box;
+    flex: 0 0 16%;
+    width: 16%;
+    max-width: 16%;
+    justify-items: center;
 
-  /* First column - no left border (odd numbers: 1, 3, 5...) */
-  .skills-section .display .language-card:nth-child(2n+1) {
-    border-left: none;
+    /* background-color: darksalmon; */
   }
 
   /* Second column - no right border (even numbers: 2, 4, 6...) */
-  .skills-section .display .language-card:nth-child(2n) {
-    border-right: none;
+  .skills-section .display .language-card:nth-child(-n+12) {
+    border-left: 3px solid var(--text-color);
+    /* background-color: lightgreen; */
+  }
+
+  .skills-section .display .language-card:nth-child(6n+1) {
+    border-left: none;
+
+    /* background-color: lightblue; */
+  }
+
+  .skills-section .display .language-card:nth-child(n+7) {
+    border-bottom: 3px solid var(--text-color);
+
+    /* background-color: lightcoral; */
+  }
+
+  .skills-section .display .language {
+    width: 60px;      /* Smaller to fit 6 columns */
+    height: 60px;
+    margin: 8px 10px; /* Less margin */
+    padding: 12px;
+
+    /* background-color: wheat; */
   }
 
   /* SECTION 4: EXPERIENCE*/
-    .experience-section .dots-left,
-    .experience-section .dots-right {
-      width: 300px;
-      height: 300px;
-    }
-
-    /* SECTION 5: ABOUT */
-    .about-section .cells {
-      flex-wrap: wrap;  /* Allows items to wrap to next line */
-    }
-
-    /* First two cells take 50% each (side by side) */
-    #about-me,
-    #hobbies {
-      flex: 1 1 50%;  /* Each takes half the width */
-      min-width: 300px;  /* Prevents them from getting too narrow */
-    }
-
-    /* Third cell takes full width (goes underneath) */
-    #hobbie-display {
-      flex: 1 1 100%;  /* Takes full width, forces to new row */
-    }
+  .experience-section .dots-left,
+  .experience-section .dots-right {
+    width: 300px;
+    height: 300px;
+  }
+  /* SECTION 5: ABOUT */
+  .about-section .cells {
+    flex-wrap: wrap;  /* Allows items to wrap to next line */
+  }
+  /* First two cells take 50% each (side by side) */
+  #about-me,
+  #hobbies {
+    flex: 1 1 50%;  /* Each takes half the width */
+    min-width: 300px;  /* Prevents them from getting too narrow */
+  }
+  /* Third cell takes full width (goes underneath) */
+  #hobbie-display {
+    flex: 1 1 100%;  /* Takes full width, forces to new row */
+  }
 
 }
 
 @media (max-width: 930px) {
-  /* SECTION 1: INTRO */
-  .intro-section .portrait img {
-    width: 400px;
-  }
+
 }
 
 
-/* Tablets */
+/* ============================================
+   TABLET BREAKPOINTS
+   ============================================ */
 @media (max-width: 850px) {
   /* SECTION 1: INTRO */
   .intro-section {
@@ -656,9 +795,56 @@ nav .right select {
     width: 300px;
   }
 
-}
+ /* SECTION 3: SKILLS */
 
-    /* SECTION 4: EXPERIENCE*/
+ .skills-section {
+   padding: 0px 100px;
+
+   /* background-color: aquamarine; */
+ }
+
+ .skills-section .display {
+   padding: 0px;
+
+   /* background-color: aquamarine; */
+ }
+ .skills-section .display .language-card {
+   box-sizing: border-box;
+   flex: 0 0 50%;
+   width: 50%;
+   max-width: 50%;
+   border: 3px solid var(--text-color);
+   padding: 0px;
+
+   /* background-color: darksalmon; */
+ }
+
+ /* Second column - no right border (even numbers: 2, 4, 6...) */
+ .skills-section .display .language-card:nth-child(2n) {
+   border-bottom: none;
+   /* background-color: lightgreen; */
+ }
+
+ .skills-section .display .language-card:nth-child(2n+1) {
+   border-left: none;
+   border-bottom: none;
+
+   /* background-color: lightblue; */
+ }
+
+ .skills-section .display .language-card:nth-child(n+11) {
+   border-bottom: 3px solid var(--text-color);
+
+   /* background-color: lightcoral; */
+ }
+
+ .skills-section .display .language {
+   margin: 5px 5px;
+
+   /* background-color: wheat; */
+ }
+
+  /* SECTION 4: EXPERIENCE*/
   /* .experience-section .dots-left {
     width: 250px;
     height: 250px;
@@ -668,8 +854,11 @@ nav .right select {
     width: 250px;
     height: 250px;
   } */
+}
 
-/* Large Phones */
+/* ============================================
+   LARGE PHONES BREAKPOINTS
+   ============================================ */
 @media (max-width: 740px) {
 
   /* SECTION 1: INTRO */
@@ -678,7 +867,9 @@ nav .right select {
   }
 }
 
-/* Phones */
+/* ============================================
+   PHONES BREAKPOINTS
+   ============================================ */
 @media (max-width: 680px) {
   /* NAVBAR */
   nav {
@@ -696,6 +887,7 @@ nav .right select {
   /* SECTION 1: INTRO */
   .intro-section {
     padding: 0 20px;
+    gap: 0px;
   }
 
   .intro-section .text h1 {
@@ -708,5 +900,224 @@ nav .right select {
   }
   .work-section .text h3 {
     font-size: 24px;
+  }
+}
+
+/* ============================================
+   SMALL PHONES BREAKPOINTS
+   ============================================ */
+@media (max-width: 600px) {
+  /* BODY */
+  body {
+    padding-top: 60px;
+  }
+
+  /* NAVBAR */
+  nav {
+    height: 60px;
+  }
+
+  nav .left h1 {
+    font-size: 16px;
+  }
+
+  nav .right select {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  /* SECTION 1: INTRO */
+  .intro-section {
+    padding: 0 15px;
+    margin: 20px auto 60px;
+    flex-direction: column-reverse;
+  }
+
+  .intro-section .text {
+    padding: 5px;
+  }
+
+  .intro-section .text h1 {
+    font-size: 24px;
+  }
+
+  .intro-section .text p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .intro-section .text h4 {
+    font-size: 14px;
+  }
+
+  .intro-section .text i {
+    font-size: 20px;
+  }
+
+  .intro-section .text .links a {
+    font-size: 14px;
+    padding: 6px 15px;
+  }
+
+  /* SECTION 2: FEATURED WORK */
+  .work-section {
+    padding: 0 15px;
+  }
+
+  .work-section .text h2 {
+    font-size: 24px;
+  }
+
+  .work-section .text h3 {
+    font-size: 20px;
+  }
+
+  .work-section .cells .cell {
+    width: 100%;
+    max-width: 290px;
+    margin: 15px 0;
+    padding: 15px;
+  }
+
+  .work-section .cells .cell .showcase {
+    width: 100%;
+    /* height: 250px; */
+  }
+
+  .work-section .cells .cell .text {
+    width: 100%;
+  }
+
+  /* SECTION 3: SKILLS */
+  .skills-section .text h2 {
+    font-size: 24px;
+  }
+
+  .skills-section .text h3 {
+    font-size: 20px;
+  }
+
+  .skills-section .display {
+    padding: 0;
+  }
+
+  .skills-section .display .language-card {
+    padding: 0;
+  }
+
+  .skills-section .display .language {
+    width: 50px;
+    height: 50px;
+    margin: 8px 20px;
+    padding: 10px;
+  }
+
+  /* SECTION 4: EXPERIENCE */
+  .experience-section {
+    padding: 0 15px;
+  }
+
+  .experience-section .text h2 {
+    font-size: 24px;
+  }
+
+  .experience-section .text h3 {
+    font-size: 20px;
+  }
+
+  .experience-section .dots-left,
+  .experience-section .dots-right {
+    /* Hide decorative elements */
+    display: none;
+  }
+
+  .experience-section .experience-cards {
+    margin: 0;
+    padding: 0 5px;
+  }
+
+  .experience-section .experience-cards .experience-card {
+    padding: 15px;
+    margin: 25px 0;
+  }
+
+  .experience-section .experience-cards .experience-card h3 {
+    font-size: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-section .experience-cards .experience-card h3 .date {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .experience-section .experience-cards .experience-card h4 {
+    font-size: 14px;
+  }
+
+  .experience-section .experience-cards .experience-card p {
+    font-size: 14px;
+  }
+
+  .experience-section .experience-cards .experience-card .tags {
+    flex-wrap: wrap;
+  }
+
+  .experience-section .experience-cards .experience-card .tags .tag {
+    font-size: 12px;
+  }
+
+  /* SECTION 5: ABOUT */
+  .about-section {
+    padding: 0 15px;
+  }
+
+  .about-section .text h2 {
+    font-size: 24px;
+  }
+
+  .about-section .text h3 {
+    font-size: 20px;
+  }
+
+  .about-section .cells {
+    flex-direction: column;
+  }
+
+  .about-section .cells .cell {
+    padding: 20px 10px;
+  }
+
+  .about-section #about-me h4 {
+    font-size: 20px;
+  }
+
+  .about-section #about-me p {
+    font-size: 14px;
+  }
+
+  .about-section #hobbies h1 {
+    font-size: 20px;
+  }
+
+  .about-section #hobbies h4 {
+    font-size: 14px;
+  }
+
+  .about-section #hobbies p {
+    font-size: 14px;
+  }
+
+  .about-section .cells .cell .hobbie-cards {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+    /* NAVBAR */
+  nav {
+    padding: 0 10px;
+    height: 60px;
   }
 }

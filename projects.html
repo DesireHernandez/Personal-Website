@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desire Hernandez's Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="projects.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+
+  <title>Projects | Desire Hernandez</title>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -13,14 +21,122 @@
       <h1>Desire Hernandez</h1>
     </div>
     <div class="right">
-      <!-- WEB VIEW OPTION -->
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+
+      <select id="menu-select">
+        <option value="index.html">Home</option>
+        <option value="projects.html" selected>Projects</option>
+      </select>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- PROJECTS HEADER -->
+    <section class="projects-hero">
+      <h3>Portfolio</h3>
+      <h2>All Projects</h2>
+      <p>A collection of academic, personal, and experimental work.</p>
+    </section>
+
+    <!-- PROJECT GRID -->
+    <section class="projects-grid">
+
+      <!-- Project Card -->
+      <a href="project-tuneswipe.html" class="project-card">
+        <div class="showcase">
+          <img src="images/PartialOutlineMockup.png" alt="TuneSwipe mockup" />
+        </div>
+        <div class="text">
+          <h4>TuneSwipe</h4>
+          <div class="tags">
+            <span class="tag">Mobile App</span>
+            <span class="tag">AI</span>
+          </div>
+          <p>Music discovery app using intelligent swiping and personalization.</p>
+        </div>
+      </a>
+
+      <a href="project-blackjack.html" class="project-card">
+        <div class="showcase">
+          <img src="images/PartialOutlineMockup.png" alt="Blackjack AI" />
+        </div>
+        <div class="text">
+          <h4>Blackjack AI</h4>
+          <div class="tags">
+            <span class="tag">Game AI</span>
+            <span class="tag">Minimax</span>
+          </div>
+          <p>Multiplayer Blackjack with card counting and decision trees.</p>
+        </div>
+      </a>
+
+      <a href="project-weather.html" class="project-card">
+        <div class="showcase">
+          <img src="images/PartialOutlineMockup.png" alt="Weather App" />
+        </div>
+        <div class="text">
+          <h4>Weather App</h4>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">API</span>
+          </div>
+          <p>Full-stack weather app using MongoDB and external APIs.</p>
+        </div>
+      </a>
+
+      <a href="project-ai-art.html" class="project-card">
+        <div class="showcase">
+          <img src="images/PartialOutlineMockup.png" alt="AI Art Generator" />
+        </div>
+        <div class="text">
+          <h4>AI Art Emulator</h4>
+          <div class="tags">
+            <span class="tag">ML</span>
+            <span class="tag">Creative AI</span>
+          </div>
+          <p>Artwork generation system inspired by artist styles.</p>
+        </div>
+      </a>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desire Hernandez's Projects</title>
+</head>
+<body> -->
+
+  <!-- NAVBAR -->
+  <!-- <nav class="menu">
+    <div class="left">
+      <h1>Desire Hernandez</h1>
+    </div>
+    <div class="right"> -->
+      <!-- WEB VIEW OPTION -->
+      <!-- <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
       <a href="index.html">About</a>
-      <a href="index.html">Contact</a>
+      <a href="index.html">Contact</a> -->
 
       <!-- MOBLIE VIEW OPTION -->
-      <select name="menu" id="menu-select">
+      <!-- <select name="menu" id="menu-select">
         <option value="home">Home</option>
         <option value="projects">Projects</option>
         <option value="about">About</option>
@@ -31,4 +147,4 @@
   </nav>
 
 </body>
-</html>
+</html> -->
