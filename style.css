@@ -105,34 +105,27 @@ nav .right select {
 
 /* SECTION 1: Intro */
 .intro-section {
-  /* old */
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  /* padding: 0 50px; */
-  /* margin: 20px 0; */
-  /* margin-bottom: 100px; */
-  gap: 60px;
-
-  /* new */
+  /* display: flex; */
   position: relative;
-  /* max-width: 1400px; */
+  max-width: 1400px;
   margin: 40px auto 120px;
   padding: 0 80px;
-  justify-content: center;
 
   /* background-color: violet; */
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 
 }
 
 .intro-section .text {
-  /* old */
-  /* flex: 5; */
-
-  /* new */
-  /* flex: 6; */
+  flex: 1;
+  max-width: 650px;
   padding: 10px;
-
   /* background-color: darksalmon; */
 }
 
@@ -141,15 +134,15 @@ nav .right select {
   font-size: 40px;
   font-weight: bold;
   font-style: italic;
-  justify-self: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .intro-section .text p {
   font-size: 18px;
-  max-width: 650px;
   text-align: center;
-  margin-top: 18px;
-  margin: 18px auto 0;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .intro-section .text .highlight {
@@ -163,11 +156,12 @@ nav .right select {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .intro-section .text i {
   font-size: 29px;
-  display: inline-flex;
+  /* display: inline-flex; */
 }
 
 .intro-section .text .links {
@@ -183,23 +177,22 @@ nav .right select {
   padding: 7px 20px;
   letter-spacing: 1.8px;
   text-decoration: none;
+  display: inline-block;
+  transition: var(--background-color) 0.3s ease, transform 0.2s ease;
 }
 
-/* .intro-section .portrait { */
-  /* old */
-  /* flex: 2;
-  display: flex;
-  position: relative;
-  justify-content: right;
-  flex: 2; */
-  /* new */
-  /* flex: 4;
+.intro-section .text .links a:hover {
+  background-color: var(--link-color);
+}
 
-  background-color: olivedrab;
-} */
+.intro-section .portrait {
+  flex-shrink: 0;
+}
 
 .intro-section .portrait img {
   width: 525px;
+  height: auto;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
 }
 
 /* SECTION 2: Featured Work */
@@ -472,97 +465,136 @@ nav .right select {
 .about-section {
   padding: 0 50px;
   margin-bottom: 100px;
-
-  /* background-color: #F9DEC9; */
 }
 
-.about-section .cells {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  /* gap: 30px; */
-
-  /* background-color: #685044; */
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
-.about-section .cells .cell {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: flex-start; */
-  padding: 40px;
-  /* gap: 20px; */
-
-  /* background-color: #50A2A7; */
-}
-
-
-.about-section #about-me h4 {
-  font-family: "Merriweather", sans;
-  font-style: italic;
-  font-size: 28px;
-
-  /* background-color: #FC9F5B; */
-}
-
-.about-section #about-me p {
-  font-size: 18px;
-  font-weight: regular;
-  margin-top: 20px;
-  /* margin-bottom: 20px; */
-
-  /* background-color: #ECE4B7; */
-}
-
-
-.about-section .cells .cell .hobbie-cards {
-  border: 3px solid var(--text-color);
+.about-text-card {
+  border: 4px solid var(--text-color);
   border-radius: 10px;
-  ;
-  padding: 20px;
-  /* margin-top: 20px; */
-
-  /* background-color: #D3DFB8; */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 35px;
+  justify-items: center;
 }
 
-.about-section .cells .cell .hobbie-cards:first-of-type {
-  margin-top: 20px;
 
-  /* background-color: #9B2915; */
-}
-
-.about-section #hobbies h1 {
+.about-text-card h4 {
   font-family: "Merriweather", sans;
   font-style: italic;
   font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--header-color);
 }
 
-.about-section #hobbies h4 {
+.about-text-card p {
   font-size: 18px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-
-  /* background-color: cadetblue; */
-}
-
-.about-section #hobbies i {
-  font-size: 25px;
-
-  /* background-color: lightgreen; */
-}
-
-.about-section #hobbies p {
-  font-size: 18px;
-  font-weight: regular;
-  margin-top: 10px;
+  line-height: 1.7;
   margin-bottom: 20px;
 }
 
-.about-section .cells .cell .books img {
-  width: 100%;
+
+.about-text-card p:last-child {
+  margin-bottom: 0px;
 }
+
+/* HOBBIES SECTION */
+
+.hobbies-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hobbies-title {
+  font-family: "Merriweather", sans;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--header-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hobby-card {
+  border: 4px solid var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-3px);
+}
+
+.hobby-header {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--background-color) 0.3s ease;
+}
+
+.hobby-header:hover {
+  background-color: #f5f2eb;
+}
+
+.hobby-header h5 {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hobby-header i {
+  color: var(--header-color);
+}
+
+.toggle-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hobby-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 20px;
+}
+
+.hobby-content.active {
+  max-height: 1000px;
+  padding: 0 20px 20px 20px;
+}
+
+.hobby-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hobby-showcase {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f2eb;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.hobby-showcase img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
 
 /* SECTION 6: CONTACT */
 .contact-section {

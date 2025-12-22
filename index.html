@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="script.js" defer></script>
 
   <title>Desire Hernandez</title>
 </head>
@@ -40,26 +41,27 @@
 
   <main>
     <!-- SECTION 1: Intro -->
-    <section class="intro-section">
-      <div class="text">
-        <h1>Hi, I'm Desire Hernandez!</h1>
-        <p>I'm a recent Computer Science graduate with a passion for <span class="highlight">software engineering</span> and <span class="highlight">collaborative problem-solving</span>.
-        Fascinated by the boundless possibilities of technology and driven by creating intuitive user experiences, I'm drawn to
-        creating software that feels almost magical in its <span class="highlight">elegance</span> and <span class="highlight">impact</span>.</p>
+    <section id="home" class="intro-section">
+      <div class="intro-content">
+        <div class="text">
+          <h1>Hi, I'm Desire Hernandez!</h1>
+          <p>I'm a recent Computer Science graduate with a passion for <span class="highlight">software engineering</span> and <span class="highlight">collaborative problem-solving</span>.
+          Fascinated by the boundless possibilities of technology and driven by creating intuitive user experiences, I'm drawn to
+          creating software that feels almost magical in its <span class="highlight">elegance</span> and <span class="highlight">impact</span>.</p>
 
-        <h4><i class="fa-solid fa-location-dot"></i>CARSON, CA</h4>
+          <h4><i class="fa-solid fa-location-dot"></i>CARSON, CA</h4>
 
-        <div class="links">
-          <a href="files/DesireHResume2025.pdf" target="_blank" rel="noopener">
-            <span>Resume</span>
-          </a>
+          <div class="links">
+            <a href="files/DesireHResume2025.pdf" target="_blank" rel="noopener">
+              <span>Resume</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="portrait">
+          <img src="images/UpdatedPortrait.png" alt="Desire Hernandez headshot">
         </div>
       </div>
-
-      <div class="portrait">
-        <img src="images/UpdatedPortrait.png" alt="Desire Hernandez headshot">
-      </div>
-
     </section>
 
     <!-- SECTION 2: Featured Work -->
@@ -308,9 +310,9 @@
         <h2>Beyond the Portfolio</h2>
       </div>
 
-      <div class="cells">
-
-          <div class="cell" id="about-me">
+      <div class="about-container">
+          <!-- About Me Text -->
+          <div class="about-text-card">
             <h4>A Little About Me:</h4>
             <p>I never planned to end up at Basgiath War College. While my peers spent years preparing for the deadly trials of the
             Riders Quadrant, I was meant for the safety of the Scribe Quadrant—surrounded by books, not battle. But life has a way
@@ -329,44 +331,65 @@
             whatever comes next with everything I have.</p>
           </div>
 
-          <div class="cell" id="hobbies">
-            <h1>Hobbies:</h1>
-            <div class="hobbie-cards">
-              <h4>Reading<i class="fa-solid fa-chevron-down"></i></h4>
-              <p>The books displayed here are my all-time favorites that have shaped my reading journey since I started in 2021. I'm
-              drawn to romance, fantasy, mystery/thriller, fiction, and historical fiction—each genre offering something unique, from
-              heart-fluttering love stories to intricate mysteries that keep me guessing until the final page.</p>
-            </div>
-            <div class="hobbie-cards">
-              <h4>Digital Camera<i class="fa-solid fa-chevron-down"></i></h4>
-              <p>I got my first digital camera this year and it's become my constant companion, capturing memories everywhere I go.
-              There's something so fulfilling about documenting life's moments—from everyday adventures to special occasions—and I'm
-              slowly building what I hope will become a comprehensive photo album of my life.</p>
-            </div>
-            <div class="hobbie-cards">
-              <h4>Music<i class="fa-solid fa-chevron-down"></i></h4>
-              <p>The tracks displayed here are my recent repeats, the ones I've had on constant rotation. Music is one of the most
-              important ways I express myself—there's not a day that goes by without it, and it never fails to make me happy. I'm
-              constantly discovering new sounds and artists, always excited to find that next song that perfectly captures how I'm
-              feeling or introduces me to something completely different.</p>
-            </div>
-          </div>
+          <!-- Hobbies Section -->
+          <div class="hobbies-section">
+            <h4 class="hobbies-title">My Hobbies:</h4>
 
-        <div class="cell" id="hobbie-display">
-          <div class="books">
-            <img src="images/Bookshelf.png" alt="Stack of Books">
-          </div>
-          <!-- <div class="photos">
-            <img src="images/PhotoGallery.png" alt="Digital Camera">
-          </div>
-          <div class="music-tracks">
-            <img src="images/IPod.png" alt="Music Notes">
-          </div> -->
+            <!-- Reading Hobby -->
+            <div class="hobby-card">
+              <div class="hobby-header" onclick="toggleHobby('reading')">
+                <h5><i class="fa-solid fa-book"></i> Reading</h5>
+                <i class="fa-solid fa-chevron-down toggle-icon" id="reading-icon"></i>
+              </div>
+              <div class="hobby-content" id="reading-content">
+                <p>The books displayed here are my all-time favorites that have shaped my reading journey since I started in 2021. I'm
+                drawn to romance, fantasy, mystery/thriller, fiction, and historical fiction—each genre offering something unique, from
+                heart-fluttering love stories to intricate mysteries that keep me guessing until the final page.</p>
+                <div class="hobby-showcase">
+                  <img src="images/FavesBookshelf.png" alt="Shelf of Favorite Books">
+                </div>
+              </div>
+            </div>
 
-        </div>
+          <!-- Digital Camera Hobby -->
+            <div class="hobby-card">
+              <div class="hobby-header" onclick="toggleHobby('camera')">
+                <h5><i class="fa-solid fa-camera"></i> Digital Camera</h5>
+                <i class="fa-solid fa-chevron-down toggle-icon" id="camera-icon"></i>
+              </div>
+              <div class="hobby-content" id="camera-content">
+                <p>I got my first digital camera this year and it's become my constant companion, capturing memories everywhere I go.
+                There's something so fulfilling about documenting life's moments—from everyday adventures to special occasions—and I'm
+                slowly building what I hope will become a comprehensive photo album of my life.</p>
+                <div class="hobby-showcase">
+                  <img src="images/DigiCam1.JPG" alt="Digital Camera Photos">
+                </div>
+              </div>
+            </div>
+
+            <!-- Music Hobby -->
+            <div class="hobby-card">
+              <div class="hobby-header" onclick="toggleHobby('music')">
+                <h5><i class="fa-solid fa-music"></i> Music</h5>
+                <i class="fa-solid fa-chevron-down toggle-icon" id="music-icon"></i>
+              </div>
+              <div class="hobby-content" id="music-content">
+                <p>The tracks displayed here are my recent repeats, the ones I've had on constant rotation. Music is one of the most
+                important ways I express myself—there's not a day that goes by without it, and it never fails to make me happy. I'm
+                constantly discovering new sounds and artists, always excited to find that next song that perfectly captures how I'm
+                feeling or introduces me to something completely different.</p>
+                <div class="hobby-showcase">
+                  <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/2sUFi0kjLCHu4ZTDgJ7khP?utm_source=generator" width="100%" height="352"
+                    frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
       </div>
-
     </section>
 
     <!-- SECTION 6: Contact -->
