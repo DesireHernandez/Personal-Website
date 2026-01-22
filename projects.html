@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="projects.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
   <title>Projects | Desire Hernandez</title>
 </head>
@@ -36,71 +34,83 @@
   <main>
 
     <!-- PROJECTS HEADER -->
-    <section class="projects-hero">
+    <section class="projects-header">
       <h3>Portfolio</h3>
       <h2>All Projects</h2>
       <p>A collection of academic, personal, and experimental work.</p>
     </section>
 
-    <!-- PROJECT GRID -->
-    <section class="projects-grid">
+    <!-- PROJECTS GRID -->
+    <div class="projects-container">
 
-      <!-- Project Card -->
-      <a href="project-tuneswipe.html" class="project-card">
-        <div class="showcase">
-          <img src="images/PartialOutlineMockup.png" alt="TuneSwipe mockup" />
+      <!-- Project 1: TuneSwipe -->
+      <div class="project-card" onclick="window.location.href='projects/project-tuneswipe.html'">
+        <div class="project-showcase">
+          <img src="images/PartialOutlineMockup.png" alt="TuneSwipe Mockup">
         </div>
-        <div class="text">
+        <div class="project-info">
           <h4>TuneSwipe</h4>
-          <div class="tags">
-            <span class="tag">Mobile App</span>
-            <span class="tag">AI</span>
+          <div class="project-tags">
+            <span class="project-tag">Mobile App</span>
+            <span class="project-tag">Recommendation System</span>
           </div>
-          <p>Music discovery app using intelligent swiping and personalization.</p>
+          <p>A Tinder-like music discovery app that uses intelligent swiping and behavioral analysis to curate personalized
+            playlists.</p>
+          <span class="view-project">View Project <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-      </a>
+      </div>
 
-      <a href="project-blackjack.html" class="project-card">
-        <div class="showcase">
-          <img src="images/PartialOutlineMockup.png" alt="Blackjack AI" />
+      <!-- Project 2: Hospital Management System -->
+      <div class="project-card" onclick="window.location.href='projects/project-hospital.html'">
+        <div class="project-showcase">
+          <img src="images/PartialOutlineMockup.png" alt="Hospital System Mockup">
         </div>
-        <div class="text">
-          <h4>Blackjack AI</h4>
-          <div class="tags">
-            <span class="tag">Game AI</span>
-            <span class="tag">Minimax</span>
+        <div class="project-info">
+          <h4>Hospital Management System</h4>
+          <div class="project-tags">
+            <span class="project-tag">Software Design</span>
+            <span class="project-tag">UML</span>
           </div>
-          <p>Multiplayer Blackjack with card counting and decision trees.</p>
+          <p>A robust healthcare software architecture designed using advanced object-oriented principles and UML modeling.
+          </p>
+          <span class="view-project">View Project <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-      </a>
+      </div>
 
-      <a href="project-weather.html" class="project-card">
-        <div class="showcase">
-          <img src="images/PartialOutlineMockup.png" alt="Weather App" />
+      <!-- Project 3: Diabetes Prediction -->
+      <div class="project-card" onclick="window.location.href='projects/project-diabetes.html'">
+        <div class="project-showcase">
+          <img src="images/PartialOutlineMockup.png" alt="Diabetes Prediction Mockup">
         </div>
-        <div class="text">
-          <h4>Weather App</h4>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">API</span>
+        <div class="project-info">
+          <h4>Women's Diabetes Prediction</h4>
+          <div class="project-tags">
+            <span class="project-tag">Data Science</span>
+            <span class="project-tag">Research</span>
           </div>
-          <p>Full-stack weather app using MongoDB and external APIs.</p>
+          <p>Machine learning project leveraging clinical biomarkers to predict diabetes risk in women for early detection.
+          </p>
+          <span class="view-project">View Project <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-      </a>
+      </div>
 
-      <a href="project-ai-art.html" class="project-card">
-        <div class="showcase">
-          <img src="images/PartialOutlineMockup.png" alt="AI Art Generator" />
+      <!-- Project 4: E-Commerce Platform -->
+      <div class="project-card" onclick="window.location.href='project-ecommerce.html'">
+        <div class="project-showcase">
+          <img src="images/PartialOutlineMockup.png" alt="E-Commerce Mockup">
         </div>
-        <div class="text">
-          <h4>AI Art Emulator</h4>
-          <div class="tags">
-            <span class="tag">ML</span>
-            <span class="tag">Creative AI</span>
+        <div class="project-info">
+          <h4>E-Commerce Platform</h4>
+          <div class="project-tags">
+            <span class="project-tag">Full Stack</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">Node.js</span>
           </div>
-          <p>Artwork generation system inspired by artist styles.</p>
+          <p>A full-featured online shopping platform with user authentication, product management, and secure payment
+            integration.</p>
+          <span class="view-project">View Project <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-      </a>
+      </div>
 
     </section>
 

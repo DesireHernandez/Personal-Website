@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="project.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <title>Hospital | Desire Hernandez</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="menu">
+    <div class="left">
+      <h1>Desire Hernandez</h1>
+    </div>
+    <div class="right">
+      <!-- WEB VIEW OPTION -->
+      <a href="/index.html">Home</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/index.html#about">About</a>
+      <a href="/index.html#contact">Contact</a>
+
+      <!-- MOBLIE VIEW OPTION -->
+      <select name="menu" id="menu-select">
+        <option value="/index.html">Home</option>
+        <option value="/projects.html">Projects</option>
+        <option value="/index.html#about">About</option>
+        <option value="/index.html#contact">Contact</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- BACK BUTTON -->
+  <div class="back-button">
+    <a href="/projects.html">
+      <i class="fa-solid fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
+  <!-- PROJECT HEADER -->
+  <section class="project-header">
+    <h1>Hospital Management System</h1>
+
+    <div class="project-meta">
+      <span class="meta-item">
+        <i class="fa-solid fa-calendar"></i> Fall 2024
+      </span>
+      <span class="meta-item">
+        <i class="fa-solid fa-user"></i> Group Project
+      </span>
+      <span class="meta-item">
+        <i class="fa-solid fa-clock"></i> 10 Months
+      </span>
+    </div>
+
+    <div class="project-tags">
+      <span class="project-tag">Mobile App</span>
+      <span class="project-tag">Recommendation System</span>
+      <span class="project-tag">React Native</span>
+      <span class="project-tag">Machine Learning</span>
+    </div>
+
+    <p class="project-overview">
+      TuneSwipe is a mobile application designed to revolutionize music discovery through an intuitive swipe-based
+      interface. By leveraging machine learning algorithms, TuneSwipe offers personalized music recommendations,
+      allowing users to effortlessly explore new tracks and artists tailored to their unique tastes.
+    </p>
+
+    <div class="project-links">
+      <a href="#" target="_blank">
+        <i class="fa-brands fa-github"></i> View Code
+      </a>
+      <a href="#" target="_blank">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+      </a>
+    </div>
+  </section>
+
+  <!-- PROJECT IMAGE -->
+  <section class="project-image">
+    <img src="/images/DigiCam1.JPG" alt="TuneSwipe App Screenshot">
+  </section>
+
+  <!-- PROJECT CONTENT -->
+  <section class="project-content">
+
+    <!-- OVERVIEW -->
+    <div class="content-section">
+      <h2>Project Overview</h2>
+      <p>
+        In today's streaming era, music recommendation algorithms often trap users in echo chambers, repeatedly
+        suggesting similar tracks without exposing them to genuinely new sounds. TuneSwipe addresses this problem by
+        putting discovery control back in the user's hands through an engaging, gamified experience.
+      </p>
+      <p>
+        The application leverages behavioral analysis, tracking not just what users like, but how quickly they swipe,
+        how long they listen, and patterns in their discovery journey. This nuanced data creates highly personalized
+        playlists that balance familiarity with exploration.
+      </p>
+    </div>
+
+    <!-- KEY FEATURES -->
+    <div class="content-section">
+      <h2>Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>Intelligent Swipe Interface</h4>
+          <p>Swipe right to mark a track you love, left to skip, with quick preview snippets that let you make instant
+            decisions.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Behavioral Analysis</h4>
+          <p>Advanced tracking of listening patterns.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Personalized Playlists</h4>
+          <p>Automatically curated playlists based on your swiping behavior, with options to export to major streaming
+            platforms.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Discovery Zones</h4>
+          <p>Explore music by song, artist, or genre!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECHNICAL IMPLEMENTATION -->
+    <div class="content-section">
+      <h2>Techinical Implementation</h2>
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <span class="tech-item">React Native</span>
+        <span class="tech-item">Supabase</span>
+        <span class="tech-item">PostgreSQL</span>
+        <span class="tech-item">Spotify API</span>
+        <span class="tech-item">Spoftify SDK</span>
+        <span class="tech-item">Visual Studio Code</span>
+        <span class="tech-item">Android Studio</span>
+        <span class="tech-item">TypeScript</span>
+        <span class="tech-item">Sckit-learn</span>
+        <span class="tech-item">GitHub</span>
+      </div>
+
+      <h3>Architecture</h3>
+      <p>
+        The applicatin follows a microservies architecture with a React Native front-end communicating with a Supabase
+        backend. User interactions are captured in real-time, with behavioral data processed using Python-based machine
+        learning models to generate dynamic playlists.
+      </p>
+      <ul>
+        <li><strong>Moblie Client:</strong> Built with React Native for cross-platform compatibility, featuring smooth
+          animations and responsive gesture controls.</li>
+        <li><strong>Backend:</strong> Supabase handles user authentication, data storage, and real-time updates.</li>
+        <li><strong>Machine Learning:</strong> Python scripts utilizing Scikit-learn analyze user behavior to refine
+          recommendation algorithms.</li>
+        <li><strong>APIs:</strong> Integration with the Spotify API and SDK allows seamless music playback and access to
+          a vast music library.</li>
+      </ul>
+
+      <h3>Recommendation Algorithm</h3>
+      <p>
+        The recommendation engine combines multiple data sources and techniques:
+      </p>
+      <ul>
+        <li><strong>Content-Based Filtering:</strong> Analyzes audio features (tempo, key, energy, danceability) and
+          metadata of tracks to suggest similar songs.</li>
+        <li><strong>Collaborative Filtering:</strong> Leverages community listening patterns to recommend tracks favored
+          by users with similar tastes.</li>
+        <li><strong>Behavioral Analysis:</strong> Tracks swipe speed, listening duration, and skip rates to fine-tune
+          recommendations based on user engagement.</li>
+        <li><strong>Hybrid Approach:</strong> Combines content-based and collaborative filtering with behavioral
+          insights for a holistic recommendation strategy.</li>
+      </ul>
+    </div>
+
+    <!-- CHALLENGES AND SOLUTIONS -->
+    <div class="content-section">
+      <h2>Challenges and Solutions</h2>
+
+      <div class="challenges-list">
+        <h3>Challenge: Real-time Audio Streaming</h3>
+        <p>
+          Implmenting smooth audio streaming within the app while managing network variability was a significant
+          challenge. Initial attempts led to buffering issues and playback interruptions.
+        </p>
+        <p><strong>Solution:</strong></p>
+      </div>
+
+      <div class="challenges-list">
+        <h3>Challenge: Cold Start Problem</h3>
+        <p>
+          New users with no listening history made it difficult to generate meaningful recommendations without falling
+          back on generic popular tracks.
+        </p>
+        <p><strong>Solution:</strong>Created an engaging onboarding flow where users select seed artists and genres,
+          combined with immediate behavioral tracking from first session to quickly personalize recommendations.</p>
+      </div>
+
+      <div class="challenges-list">
+        <h3>Challenge: Algorithm Balance</h3>
+        <p>
+          Finding the right balance between recommending familiar comfort music and pushing users outside their bubble
+          required extensive testing and refinement.
+        </p>
+        <p><strong>Solution:</strong>Implemented a dynamic exploration parameter that adjusts based on user engagement
+          metrics and provides user controls to tune their discovery preferences.</p>
+      </div>
+    </div>
+
+    <!-- RESULTS AND IMPACT -->
+    <div class="content-section">
+      <h2>Results & Impact</h2>
+      <p>
+        TuneSwipe has demonstrated strong potential for improving music discovery experiences. User testing revealed a
+        30% increase in the diversity of tracks added to personal playlists compared to traditional recommendation
+        systems. Feedback highlighted the app's engaging interface and the satisfaction of discovering new music
+        tailored to individual tastes.
+      </p>
+      <ul>
+        <li>30% increase in playlist diversity among test users.</li>
+        <li>85% user satisfaction rate based on post-use surveys.</li>
+        <li>Positive feedback on the intuitive swipe interface and personalized recommendations.</li>
+      </ul>
+    </div>
+
+    <!-- LESSONS LEARNED -->
+    <div class="content-section">
+      <h2>Lessons Learned</h2>
+      <p>
+        This project reinforced several important lessons about building user-facing applications:
+      </p>
+      <ul>
+        <li><strong>User Experience First:</strong> The simplest interaction model often wins. The swipe interface
+          needed to be instantaneous and satisfying.</li>
+        <li><strong>Data Privacy Matters:</strong> Beign transparent about what data we collect and why built trust with
+          users.</li>
+        <li><strong>Iterate with Feedback:</strong> Early prototypes had too many features. Simplifying based on user
+          testing led to a more focused, polished product.</li>
+        <li><strong>Performace is a Feature:</strong> No amount of clever algorithms matter if the app feels sluggish.
+          Optimiztion was crucial.</li>
+      </ul>
+    </div>
+
+    <!-- FUTURE ENHANCEMENTS -->
+    <div class="content-section">
+      <h2>Future Enhancements</h2>
+      <p>
+        Looking ahead, several enhancements could further elevate TuneSwipe:
+      </p>
+      <ul>
+        <li><strong>Social Features:</strong> Allow users to share playlists and see what friends are discovering.</li>
+        <li><strong>Enhanced Personalization:</strong> Incorporate mood and activity-based recommendations using
+          contextual data.</li>
+        <li><strong>Expanded Music Sources:</strong> Integrate additional music platforms to broaden the available
+          library.</li>
+        <li><strong>Advanced Analytics:</strong> A dashboard for users to see the algorithm in action with their music
+          taste.</li>
+      </ul>
+    </div>
+  </section>
+</body>
+
+</html>
