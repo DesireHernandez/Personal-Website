@@ -51,31 +51,29 @@
 
     <div class="project-meta">
       <span class="meta-item">
-        <i class="fa-solid fa-calendar"></i> Fall 2024
+        <i class="fa-solid fa-calendar"></i> Summer 2023
       </span>
       <span class="meta-item">
         <i class="fa-solid fa-user"></i> Group Project
       </span>
       <span class="meta-item">
-        <i class="fa-solid fa-clock"></i> 10 Months
+        <i class="fa-solid fa-clock"></i> 3 Months
       </span>
     </div>
 
     <div class="project-tags">
-      <span class="project-tag">Mobile App</span>
-      <span class="project-tag">Recommendation System</span>
-      <span class="project-tag">React Native</span>
+      <span class="project-tag">Data Science</span>
+      <span class="project-tag">Research</span>
+      <span class="project-tag">Python</span>
       <span class="project-tag">Machine Learning</span>
     </div>
 
     <p class="project-overview">
-      TuneSwipe is a mobile application designed to revolutionize music discovery through an intuitive swipe-based
-      interface. By leveraging machine learning algorithms, TuneSwipe offers personalized music recommendations,
-      allowing users to effortlessly explore new tracks and artists tailored to their unique tastes.
+      Predictive modeling project using machine learning to identify diabetes risk in women based on key health indicators. Demonstrates end-to-end data science workflow including preprocessing, feature analysis, and model evaluation.
     </p>
 
     <div class="project-links">
-      <a href="#" target="_blank">
+      <a href="https://github.com/DesireHernandez/Women-Diabetes-Prediction" target="_blank">
         <i class="fa-brands fa-github"></i> View Code
       </a>
       <a href="#" target="_blank">
@@ -96,14 +94,13 @@
     <div class="content-section">
       <h2>Project Overview</h2>
       <p>
-        In today's streaming era, music recommendation algorithms often trap users in echo chambers, repeatedly
-        suggesting similar tracks without exposing them to genuinely new sounds. TuneSwipe addresses this problem by
-        putting discovery control back in the user's hands through an engaging, gamified experience.
+        Diabetes is a widespread health condition that can lead to serious complications if not detected early. This project focuses on predicting the likelihood of diabetes in women using key health indicators such as age, body mass index (BMI), HbA1c levels, and blood glucose levels.
       </p>
       <p>
-        The application leverages behavioral analysis, tracking not just what users like, but how quickly they swipe,
-        how long they listen, and patterns in their discovery journey. This nuanced data creates highly personalized
-        playlists that balance familiarity with exploration.
+       Using a dataset sourced from Kaggle, data preprocessing and analysis were preformed to identify patterns and relationships between these features and diabetes risk. Machine learning techniques, including a Random Forest classifier, were applied to build a predictive model capable of classifying indivduals based on their likelihood of having diabetes.
+      </p>
+      <p>
+        This project emphasizes the application of data science workflows, from data cleaning and feature analysis to model training and evaluation, to support early detection and better understanding of health risk factors.
       </p>
     </div>
 
@@ -112,22 +109,32 @@
       <h2>Key Features</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <h4>Intelligent Swipe Interface</h4>
-          <p>Swipe right to mark a track you love, left to skip, with quick preview snippets that let you make instant
-            decisions.</p>
+          <h4>Data Preprocessing & Cleaning</h4>
+          <p>Cleaned and prepared the dataset by handling missing values, formatting data, and ensuring consistency for accurate model training.</p>
         </div>
         <div class="feature-card">
-          <h4>Behavioral Analysis</h4>
-          <p>Advanced tracking of listening patterns.</p>
+          <h4>Feature Selection & Analysis</h4>
+          <p>Identified key health indicators such as age, BMI, HbA1c levels, and blood glucose as primary predicators of diabetes risk.</p>
         </div>
         <div class="feature-card">
-          <h4>Personalized Playlists</h4>
-          <p>Automatically curated playlists based on your swiping behavior, with options to export to major streaming
-            platforms.</p>
+          <h4>Exploratory Data Analysis (EDA)</h4>
+          <p>Analyzed relationships between variables to uncover patterns and better understand how different health factors contribute to diabetes.</p>
         </div>
         <div class="feature-card">
-          <h4>Discovery Zones</h4>
-          <p>Explore music by song, artist, or genre!</p>
+          <h4>Data Visualization</h4>
+          <p>Used Python libraries such as Matplotlib and Seaborn to create visualizations that highlight trends and relationships within the dataset.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Machine Learning Model (Random Forest)</h4>
+          <p>Implemented a Random Forest classifier to predict the likelihood of diabetes based on multiple health features.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Model Evaluation</h4>
+          <p>Evaluated model performance using a confusion matrix to assess prediction accuracy and classifiction effectiveness.</p>
+        </div>
+        <div class="feature-card">
+          <h4>End-to-End Data Science Workflow</h4>
+          <p>Demonstrates the complete pipeline from data acquistion and preprocessing to model training and evaluation within a single notebook.</p>
         </div>
       </div>
     </div>
@@ -137,48 +144,41 @@
       <h2>Techinical Implementation</h2>
       <h3>Tech Stack</h3>
       <div class="tech-stack">
-        <span class="tech-item">React Native</span>
-        <span class="tech-item">Supabase</span>
-        <span class="tech-item">PostgreSQL</span>
-        <span class="tech-item">Spotify API</span>
-        <span class="tech-item">Spoftify SDK</span>
-        <span class="tech-item">Visual Studio Code</span>
-        <span class="tech-item">Android Studio</span>
-        <span class="tech-item">TypeScript</span>
-        <span class="tech-item">Sckit-learn</span>
-        <span class="tech-item">GitHub</span>
+        <span class="tech-item">Python</span>
+        <span class="tech-item">Google Colab</span>
+        <span class="tech-item">NumPy</span>
+        <span class="tech-item">scikit-learn</span>
+        <span class="tech-item">Pandas</span>
+        <span class="tech-item">Matplotlib</span>
+        <span class="tech-item">Seaborn</span>
       </div>
 
-      <h3>Architecture</h3>
+      <h3>Data Processing</h3>
       <p>
-        The applicatin follows a microservies architecture with a React Native front-end communicating with a Supabase
-        backend. User interactions are captured in real-time, with behavioral data processed using Python-based machine
-        learning models to generate dynamic playlists.
+        The dataset was sourced from Kaggle and contained key health indicators relevant to diabetes prediction. Data preprocessing was preformed to ensure quality and consistency before model training.
       </p>
       <ul>
-        <li><strong>Moblie Client:</strong> Built with React Native for cross-platform compatibility, featuring smooth
-          animations and responsive gesture controls.</li>
-        <li><strong>Backend:</strong> Supabase handles user authentication, data storage, and real-time updates.</li>
-        <li><strong>Machine Learning:</strong> Python scripts utilizing Scikit-learn analyze user behavior to refine
-          recommendation algorithms.</li>
-        <li><strong>APIs:</strong> Integration with the Spotify API and SDK allows seamless music playback and access to
-          a vast music library.</li>
+        <li>Cleaned and formatted dataset for analysis.</li>
+        <li>Selected relevant features including age, BMI, HbA1c levels, and blood glucose.</li>
+        <li>Structured data for compatibility with machine learning models.</li>
+        <li>Ensured data integrity to support accurate predictions.</li>
       </ul>
 
-      <h3>Recommendation Algorithm</h3>
+      <h3>Model & Algorithm</h3>
       <p>
-        The recommendation engine combines multiple data sources and techniques:
+        A Random Forest classifier was used to predict the likelihood of diabetes based on the selected health indicators.
       </p>
       <ul>
-        <li><strong>Content-Based Filtering:</strong> Analyzes audio features (tempo, key, energy, danceability) and
-          metadata of tracks to suggest similar songs.</li>
-        <li><strong>Collaborative Filtering:</strong> Leverages community listening patterns to recommend tracks favored
-          by users with similar tastes.</li>
-        <li><strong>Behavioral Analysis:</strong> Tracks swipe speed, listening duration, and skip rates to fine-tune
-          recommendations based on user engagement.</li>
-        <li><strong>Hybrid Approach:</strong> Combines content-based and collaborative filtering with behavioral
-          insights for a holistic recommendation strategy.</li>
+        <li><strong>Random Forest Approach:</strong> Utilizes an ensemble of decision trees to improve prediction accuracy and reduce overfitting.</li>
+        <li><strong>Training Process:</strong> The dataset was split into training and testing sets to evaluate model performance.</li>
+        <li><strong>Prediction Output:</strong> The model classifies individuals as diabetic or non-diabetic based on input features.</li>
+        <li><strong>Evaluation Method:</strong> A confusion matrix was used to assess classification performance and understand prediction outcomes.</li>
       </ul>
+
+      <!-- PROJECT IMAGE -->
+      <section class="project-image">
+        <img src="/images/DiabetesProject_Model.png" alt="Women's Diabetes Prediction Model Screenshot">
+      </section>
     </div>
 
     <!-- CHALLENGES AND SOLUTIONS -->
@@ -186,32 +186,35 @@
       <h2>Challenges and Solutions</h2>
 
       <div class="challenges-list">
-        <h3>Challenge: Real-time Audio Streaming</h3>
+        <h3>Challenge: Data Quality & Preprocessing</h3>
         <p>
-          Implmenting smooth audio streaming within the app while managing network variability was a significant
-          challenge. Initial attempts led to buffering issues and playback interruptions.
+          The dataset required cleaning and preparation before it could be used for modeling. Duplicate entries and dropped columns needed to be addressed to ensure the integrity of the data.
         </p>
-        <p><strong>Solution:</strong></p>
+        <p><strong>Solution:</strong> Performed data preprocessing using Python libraries such as pandas to clean, format, and structure the dataset. This ensured consistency and improved the reliability of the model's prediction.</p>
       </div>
 
       <div class="challenges-list">
-        <h3>Challenge: Cold Start Problem</h3>
+        <h3>Challenge: Selecting Relevant Features</h3>
         <p>
-          New users with no listening history made it difficult to generate meaningful recommendations without falling
-          back on generic popular tracks.
+          With multiple health indicators available, determining which features were most relevant to predicting diabetes was essential to avoid unnecessary noise in the model.
         </p>
-        <p><strong>Solution:</strong>Created an engaging onboarding flow where users select seed artists and genres,
-          combined with immediate behavioral tracking from first session to quickly personalize recommendations.</p>
+        <p><strong>Solution:</strong> Focused on key medical indicators such as age, BMI, HbA1c levels, and blood glucose, which are strongly associated with diabetes risk. This helped simplify the model while maintaining predictive relevance.</p>
       </div>
 
       <div class="challenges-list">
-        <h3>Challenge: Algorithm Balance</h3>
+        <h3>Challenge: Avoiding Overfitting</h3>
         <p>
-          Finding the right balance between recommending familiar comfort music and pushing users outside their bubble
-          required extensive testing and refinement.
+          Machine learning models, especially ensemble methods like Random Forest, can overfit the training data if not properly managed, reducing their effectiveness on unseen data.
         </p>
-        <p><strong>Solution:</strong>Implemented a dynamic exploration parameter that adjusts based on user engagement
-          metrics and provides user controls to tune their discovery preferences.</p>
+        <p><strong>Solution:</strong> Used a train-test split to evaluate model performance on unseen data, ensuring that the model generalized beyond the training dataset.</p>
+      </div>
+
+      <div class="challenges-list">
+        <h3>Challenge: Interpreting Model Results</h3>
+        <p>
+          Understanding how well the model performs and interpreting its predictions can be challenging, especially when working with classification problems.
+        </p>
+        <p><strong>Solution:</strong> Used a confusion matrix to evaluate model performance, providing insight into correct and incorrect classifications. This helped assess how well the model distinguishes between diabetic and non-diabetifc cases.</p>
       </div>
     </div>
 
@@ -219,33 +222,43 @@
     <div class="content-section">
       <h2>Results & Impact</h2>
       <p>
-        TuneSwipe has demonstrated strong potential for improving music discovery experiences. User testing revealed a
-        30% increase in the diversity of tracks added to personal playlists compared to traditional recommendation
-        systems. Feedback highlighted the app's engaging interface and the satisfaction of discovering new music
-        tailored to individual tastes.
+        This project demonstrates the application of machine learning to predict diabetes risk using real-world health data. The Random Forest model achieved an accuracy of <strong>96.84%</strong> on the test dataset, indicating its effectiveness in classifying individuals based on key health indicators.
+      </p>
+      <p>
+        The confusion matrix provided deeper insight into model performance:
       </p>
       <ul>
-        <li>30% increase in playlist diversity among test users.</li>
-        <li>85% user satisfaction rate based on post-use surveys.</li>
-        <li>Positive feedback on the intuitive swipe interface and personalized recommendations.</li>
+        <li><strong>True Positives: </strong> 611</li>
+        <li><strong>True Negatives: </strong> 8902</li>
+        <li><strong>False Positives: </strong> 55</li>
+        <li><strong>False Negatives: </strong> 255</li>
       </ul>
+      <p>
+        These results highlight the model's ability to identify identify patterns in features such as BMI, HbA1c, and blood glucose, while also revealing areas for improvement, particularly in minimizing misclassifications.
+      </p>
+      <li>Achieved <strong>96.84% accuracy</strong> on diabetes classification.</li>
+      <li>Evaluated performance using a confusion matrix for detailed insight.</li>
+      <li>Successfully applied machine learning to a real-world healthcare dataset.</li>
+      <li>Demonstrated an end-to-end data science workflow from preprocessing to evaluation.</li>
+
+      <!-- PROJECT IMAGE -->
+      <section class="project-image">
+        <img src="/images/DiabetesProject_ConfusionMatrix.png" alt="Diabetes Prediction Confusion Matrix Screenshot">
+      </section>
     </div>
 
     <!-- LESSONS LEARNED -->
     <div class="content-section">
       <h2>Lessons Learned</h2>
       <p>
-        This project reinforced several important lessons about building user-facing applications:
+        This project reinforced several key lessons about applying data science and machine learning to real-world problems:
       </p>
       <ul>
-        <li><strong>User Experience First:</strong> The simplest interaction model often wins. The swipe interface
-          needed to be instantaneous and satisfying.</li>
-        <li><strong>Data Privacy Matters:</strong> Beign transparent about what data we collect and why built trust with
-          users.</li>
-        <li><strong>Iterate with Feedback:</strong> Early prototypes had too many features. Simplifying based on user
-          testing led to a more focused, polished product.</li>
-        <li><strong>Performace is a Feature:</strong> No amount of clever algorithms matter if the app feels sluggish.
-          Optimiztion was crucial.</li>
+        <li><strong>Data Quality Directly Impacts Model Performance:</strong> Working with real-world data highlighted how important preprocess is. Clean, well-structure data is essential for producing reliable and meaningful predictions.</li>
+        <li><strong>Feature Selection Matters:</strong> Choosing relevant features such as BMI, HbA1c, and blood glucose significantly influenced the effectiveness of the model. Irrelevant or excessive features can introduce noise and reduce model performance.</li>
+        <li><strong>Understanding the Model is as Important as Using It:</strong> Implmenting a Random Forest classifier emphasized the importance of understanding how models work, including how ensemble methods improve prediction accuracy and reduce overfitting.</li>
+        <li><strong>Evaluation is More Than Accuracy:</strong> Using a confusion matrix demonstrated that evaluating a model requires more than a single metric. Understanding false positives and false negatives is especially important in healthcare-related predictions.</li>
+        <li><strong>End-to-End Workflow is Critical:</strong> This project highlighted the importance o the full data science pipeline from data collection and preprocessing to model training and evaluation rather than focusing on just one stage.</li>
       </ul>
     </div>
 
@@ -253,16 +266,13 @@
     <div class="content-section">
       <h2>Future Enhancements</h2>
       <p>
-        Looking ahead, several enhancements could further elevate TuneSwipe:
+        While this project demonstrates a complete data science workflow, several improvements could enhance the model's performance and real-world applicability:
       </p>
       <ul>
-        <li><strong>Social Features:</strong> Allow users to share playlists and see what friends are discovering.</li>
-        <li><strong>Enhanced Personalization:</strong> Incorporate mood and activity-based recommendations using
-          contextual data.</li>
-        <li><strong>Expanded Music Sources:</strong> Integrate additional music platforms to broaden the available
-          library.</li>
-        <li><strong>Advanced Analytics:</strong> A dashboard for users to see the algorithm in action with their music
-          taste.</li>
+        <li><strong>Explore Additional Machine Learning Models:</strong> Experiment with other classification algorithms such as Logistic Regression, Support Vector Machines (SVM), or Gradient Boosting to compare performance and identify the most effective approach.</li>
+        <li><strong>Feature Engineering:</strong> Introduce new derived features or refine existing ones to better capture patterns in the data and improve predictive capability.</li>
+        <li><strong>Expanded Dataset:</strong> Utilize larger and more diverse datasets to improve model generalization and reduce potential bias.</li>
+        <li><strong>Deployment as a Web Application:</strong> Develop a simple web interface where users can input health data and receive real-time predictions, turning the model into a usable tool.</li>
       </ul>
     </div>
   </section>

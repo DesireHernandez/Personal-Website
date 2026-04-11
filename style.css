@@ -105,13 +105,10 @@ nav .right select {
 
 /* SECTION 1: Intro */
 .intro-section {
-  /* display: flex; */
   position: relative;
   max-width: 1400px;
   margin: 40px auto 120px;
   padding: 0 80px;
-
-  /* background-color: violet; */
 }
 
 .intro-content {
@@ -119,14 +116,12 @@ nav .right select {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-
 }
 
 .intro-section .text {
   flex: 1;
   max-width: 650px;
   padding: 10px;
-  /* background-color: darksalmon; */
 }
 
 .intro-section .text h1 {
@@ -161,7 +156,6 @@ nav .right select {
 
 .intro-section .text i {
   font-size: 29px;
-  /* display: inline-flex; */
 }
 
 .intro-section .text .links {
@@ -205,7 +199,6 @@ nav .right select {
 .work-section .cells {
   display: flex;
   justify-content: center;
-  /* flex-wrap: wrap; */
 }
 
 .work-section .cells .cell {
@@ -305,10 +298,7 @@ nav .right select {
 
 .skills-section .display .language-card {
   border: 3px solid var(--text-color);
-  /* padding: 20px; */
   text-align: center;
-
-  /* background-color: aqua; */
 }
 
 /* Remove left border from first item in each row */
@@ -333,12 +323,12 @@ nav .right select {
 }
 
 .skills-section .display .language {
-  width: 110px;
-  height: 110px;
+  width: 70px;
+  height: 70px;
   background-color: var(--text-color);
   border: 3px solid var(--header-color);
   border-radius: 100%;
-  padding: 20px;
+  padding: 15px;
   margin: 10px 95px 10px 95px;
 }
 
@@ -350,7 +340,6 @@ nav .right select {
 
 .skills-section .display .language-card p {
   font-size: 18px;
-  /* font-weight: bold; */
   color: var(--text-color);
 }
 
@@ -359,8 +348,6 @@ nav .right select {
   padding: 0 50px;
   margin-bottom: 100px;
   position: relative;
-
-  /* background-color: wheat; */
 }
 
 .experience-section .dots-left {
@@ -373,8 +360,6 @@ nav .right select {
   background-size: contain;
   opacity: 100%;
   z-index: 0;
-
-  /* background-color: violet; */
 }
 
 .experience-section .dots-right {
@@ -387,8 +372,6 @@ nav .right select {
   background-size: contain;
   opacity: 100%;
   z-index: 0;
-
-  /* background-color: violet; */
 }
 
 .experience-section .experience-cards {
@@ -396,8 +379,6 @@ nav .right select {
   z-index: 1;
   margin: 0px 160px;
   padding-bottom: 50px;
-
-  /* background-color: #2092e9; */
 }
 
 .experience-section .experience-cards .experience-card {
@@ -421,7 +402,6 @@ nav .right select {
   font-size: 28px;
   font-weight: bold;
 
-  /* background-color: lightcoral; */
 }
 
 .experience-section .experience-cards .experience-card h3 .date {
@@ -429,28 +409,20 @@ nav .right select {
   font-weight: normal;
   color: var(--header-color);
   white-space: nowrap; /* Prevents date from breaking */
-
-  /* background-color: lightpink; */
 }
 
 .experience-section .experience-cards .experience-card h4 {
   font-size: 18px;
   color: var(--header-color);
-
-  /* background-color: lightgreen; */
 }
 
 .experience-section .experience-cards .experience-card p {
   font-size: 18px;
-
-  /* background-color: lightgoldenrodyellow; */
 }
 
 .experience-section .experience-cards .experience-card .tags {
   display: flex;
   gap: 8px;
-
-  /* background-color: lightgray; */
 }
 
 .experience-section .experience-cards .experience-card .tags .tag {
@@ -462,8 +434,14 @@ nav .right select {
   font-size: 14px;
   font-style: italic;
   font-weight: 600;
+}
 
-  /* background-color: lightblue; */
+.experience-section .experience-cards .experience-card a {
+  color: var(--text-color);
+}
+
+.experience-section .experience-cards .experience-card a:hover {
+  color: var(--link-color);
 }
 
 /* SECTION 5: ABOUT ME */
@@ -488,7 +466,6 @@ nav .right select {
   justify-items: center;
 }
 
-
 .about-text-card h4 {
   font-family: "Merriweather", sans;
   font-style: italic;
@@ -502,7 +479,6 @@ nav .right select {
   line-height: 1.7;
   margin-bottom: 20px;
 }
-
 
 .about-text-card p:last-child {
   margin-bottom: 0px;
@@ -600,6 +576,99 @@ nav .right select {
   border-radius: 5px;
 }
 
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.container .arrow {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.container:hover .arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.container .slide .item {
+  min-width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slide.transitioning {
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--background-color);
+  border: none;
+  padding: 15px 18px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.left-arrow {
+  left: 15px;
+}
+
+.right-arrow {
+  right: 15px;
+}
+
+.photo-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.indicator-dot.active {
+  background-color: #f5f2eb;
+  width: 30px;
+  border-radius: 5px;
+}
 
 /* SECTION 6: CONTACT */
 .contact-section {

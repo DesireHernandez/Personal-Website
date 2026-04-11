@@ -249,6 +249,10 @@ nav .right select {
   margin-top: 15px;
 }
 
+.tech-stack i {
+  color: var(--header-color);
+}
+
 .tech-item {
   border: 3px solid var(--text-color);
   border-radius: 10px;
