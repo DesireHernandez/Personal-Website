@@ -20,6 +20,47 @@ function toggleHobby(hobbyId) {
   }
 }
 
+// Folder Toggle Function
+function toggleFolder(folderElement) {
+
+  const isActive = folderElement.classList.contains('active');
+
+  // Close everything
+  document.querySelectorAll('.folder').forEach(item => {
+    item.classList.remove('active');
+  });
+
+  document.querySelectorAll('.content-panel').forEach(panel => {
+    panel.classList.remove('active');
+  });
+
+  // If active, STOP (toggle off behavior)
+  if (isActive) return;
+
+  // Activate clicked folder
+  folderElement.classList.add('active');
+
+  // Get matching content key
+  const targetValue = folderElement.getAttribute('data-target');
+
+  // Activate matching content panel
+  const targetPanel = document.querySelector(`.content-panel[data-content="${targetValue}"]`);
+
+  if (targetPanel) {
+    targetPanel.classList.add('active');
+  }
+
+  // if (folderElement.classList.contains('active')) {
+  //   folderElement.classList.remove('active')
+  // } else {
+  //   document.querySelectorAll('.folder').forEach(item => {
+  //     item.classList.remove('active');
+  //   })
+  //   folderElement.classList.add('active');
+
+  // }
+}
+
 // Photo Slider Functionality
 let currentIndex = 0;
 const slide = document.querySelector('.slide');

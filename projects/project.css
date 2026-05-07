@@ -242,6 +242,19 @@ nav .right select {
   margin-bottom: 0;
 }
 
+.project-mockup {
+  padding: 50px 0 0 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-mockup img {
+  width: 100%;
+  border: 4px solid var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;

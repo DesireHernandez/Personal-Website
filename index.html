@@ -75,7 +75,7 @@
 
         <div class="cell" onclick="window.location.href='projects.html'">
           <div class="showcase">
-            <img src="images/PartialOutlineMockup.png" alt="iPhone 14 Mockup">
+            <img src="images/TuneSwipeMockup.png" alt="iPhone 16 TuneSwipe Mockup">
           </div>
           <div class="text">
             <h4>TuneSwipe</h4>
@@ -93,7 +93,7 @@
 
         <div class="cell" onclick="window.location.href='projects.html'">
           <div class="showcase">
-            <img src="images/PartialOutlineMockup.png" alt="iPhone 14 Mockup">
+            <img src="images/FHSMockUp.png" alt="Mac & iPad Hospital System Mockup">
           </div>
           <div class="text">
             <h4>Hospital Management System</h4>
@@ -111,7 +111,7 @@
 
         <div class="cell" onclick="window.location.href='projects.html'">
           <div class="showcase">
-            <img src="images/PartialOutlineMockup.png" alt="iPhone 14 Mockup">
+            <img src="images/DiabetesProjectMockup.png" alt="Mac & iPad Diabetes Predication Mockup">
           </div>
           <div class="text">
             <h4>Women's Diabetes Prediction</h4>
@@ -227,100 +227,285 @@
         <h2>Work Experience</h2>
       </div>
 
-      <div class="dots-left"></div>
-      <div class="dots-right"></div>
+    <div class="folders-wrapper">
+      <div class="folders-row">
 
+        <!-- Folder 1: Job Experiences -->
+        <div class="folder folder--jobs" data-target="jobs" onclick="toggleFolder(this)">
+          <!-- frame: The base layer of the folder, providing a background and structure. -->
+          <div class="frame">
+            <!-- frame-bg: A background element inside the frame, likely for color or texture. -->
+            <div class="frame-bg"></div>
+            <!-- group: Groups the card elements (center, left, right) for positioning within the frame. -->
+            <div class="group">
+              <!-- card-center: The central card element, possibly for main content or visual balance. -->
+              <div class="card-center"></div>
+              <!-- card-right-container: Container for the right-side card, allowing for nested positioning. -->
+              <div class="card-right-container">
+                <!-- card-right-inner: Inner wrapper for precise alignment of the right card. -->
+                <div class="card-right-inner">
+                  <!-- card-right: The actual right card element, part of the folder's layered design. -->
+                  <div class="card-right"></div>
+                </div>
+              </div>
+              <!-- card-left-container: Container for the left-side card, mirroring the right side for symmetry. -->
+              <div class="card-left-container">
+                <!-- card-left-inner: Inner wrapper for precise alignment of the left card. -->
+                <div class="card-left-inner">
+                  <!-- card-left: The actual left card element, completing the folder's visual stack. -->
+                  <div class="card-left"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- subtract-container: Holds the SVG that creates the folder's shape and shadow effects. "Subtract" likely refers to clipping or masking. -->
+          <div class="subtract-container">
+            <!-- subtract-inner: Inner container for the SVG, ensuring proper scaling and positioning. -->
+            <div class="subtract-inner">
+              <!-- subtract-svg: The SVG element that defines the folder's outline, shadow, and blur effects using paths and filters. -->
+              <svg class="subtract-svg" fill="none" preserveAspectRatio="none" viewBox="0 0 526.681 374.5">
+                <!-- foreignObject: Allows embedding HTML (like the blur-overlay) inside the SVG for advanced effects. -->
+                <foreignObject height="389.5" width="536.681" x="-5" y="0">
+                  <!-- blur-overlay: An HTML div inside the SVG, used for blur effects with a clip-path to match the folder shape. -->
+                  <div class="blur-overlay" style="clip-path: url(#bgblur_clip_1);" xmlns="http://www.w3.org/1999/xhtml">
+                  </div>
+                </foreignObject>
+                <!-- g (group): Applies filters (like shadows) to the SVG path. -->
+                <g filter="url(#filter_shadow_1)">
+                  <!-- path: The actual SVG path that draws the folder shape and applies fill/color. -->
+                  <path
+                    d="M496.679 25C505.683 25 512.659 32.8774 511.569 41.8154L473.226 356.315C472.308 363.842 465.919 369.5 458.337 369.5H76.5621C69.1263 369.5 62.8132 364.052 61.7242 356.696L15.1646 42.1963C13.8237 33.1363 20.8447 25 30.0035 25H160.743C175.642 56.1586 216.076 78.5 263.62 78.5C311.163 78.4998 351.596 56.1585 366.496 25H496.679Z"
+                    fill="#5EA0FD" fill-opacity="0.5" shape-rendering="crispEdges" />
+                </g>
+                <!-- defs: Defines reusable elements like filters and clip-paths for the SVG. -->
+                <defs>
+                  <!-- filter: Applies a drop shadow effect to the folder. -->
+                  <filter id="filter_shadow_1" x="-5" y="0" width="536.681" height="389.5" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="-10" />
+                    <feGaussianBlur stdDeviation="7.5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow" />
+                    <feBlend in="SourceGraphic" in2="effect1_dropShadow" mode="normal" result="shape" />
+                  </filter>
+                  <!-- clipPath: Defines the clipping shape for the blur-overlay, matching the folder's path. -->
+                  <clipPath id="bgblur_clip_1" transform="translate(5 0)">
+                    <path
+                      d="M496.679 25C505.683 25 512.659 32.8774 511.569 41.8154L473.226 356.315C472.308 363.842 465.919 369.5 458.337 369.5H76.5621C69.1263 369.5 62.8132 364.052 61.7242 356.696L15.1646 42.1963C13.8237 33.1363 20.8447 25 30.0035 25H160.743C175.642 56.1586 216.076 78.5 263.62 78.5C311.163 78.4998 351.596 56.1585 366.496 25H496.679Z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <!-- job-text: The label/text for this folder (e.g., "Job Experiences"). Positioned below the folder shape. -->
+          <p class="job-text">Job Experiences</p>
+        </div>
 
-      <div class="experience-cards">
+        <!-- Folder 2: Education -->
+        <div class="folder folder--education" data-target="education" onclick="toggleFolder(this)">
+          <div class="frame">
+            <div class="frame-bg"></div>
+            <div class="group">
+              <div class="card-center"></div>
+            </div>
+          </div>
+          <div class="subtract-container">
+            <div class="subtract-inner">
+              <svg class="subtract-svg" fill="none" preserveAspectRatio="none" viewBox="0 0 526.681 374.5">
+                <foreignObject height="389.5" width="536.681" x="-5" y="0">
+                  <div class="blur-overlay" style="clip-path: url(#bgblur_clip_2);" xmlns="http://www.w3.org/1999/xhtml">
+                  </div>
+                </foreignObject>
+                <g filter="url(#filter_shadow_2)">
+                  <path
+                    d="M496.679 25C505.683 25 512.659 32.8774 511.569 41.8154L473.226 356.315C472.308 363.842 465.919 369.5 458.337 369.5H76.5621C69.1263 369.5 62.8132 364.052 61.7242 356.696L15.1646 42.1963C13.8237 33.1363 20.8447 25 30.0035 25H160.743C175.642 56.1586 216.076 78.5 263.62 78.5C311.163 78.4998 351.596 56.1585 366.496 25H496.679Z"
+                    fill="#5EA0FD" fill-opacity="0.5" shape-rendering="crispEdges" />
+                </g>
+                <defs>
+                  <filter id="filter_shadow_2" x="-5" y="0" width="536.681" height="389.5" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="-10" />
+                    <feGaussianBlur stdDeviation="7.5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow" />
+                    <feBlend in="SourceGraphic" in2="effect1_dropShadow" mode="normal" result="shape" />
+                  </filter>
+                  <clipPath id="bgblur_clip_2" transform="translate(5 0)">
+                    <path
+                      d="M496.679 25C505.683 25 512.659 32.8774 511.569 41.8154L473.226 356.315C472.308 363.842 465.919 369.5 458.337 369.5H76.5621C69.1263 369.5 62.8132 364.052 61.7242 356.696L15.1646 42.1963C13.8237 33.1363 20.8447 25 30.0035 25H160.743C175.642 56.1586 216.076 78.5 263.62 78.5C311.163 78.4998 351.596 56.1585 366.496 25H496.679Z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <p class="job-text">Education</p>
+        </div>
 
-        <div class="experience-card">
-          <h3>Coding Instructor/Sensei
-            <span class="date">September 2025 - Present</span>
-          </h3>
-          <div class="tags">
-            <span class="tag">Teaching</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Probelm-Solving</span>
-            <span class="tag">Mentoring</span>
+        <!-- Folder 3: Certificates -->
+        <div class="folder folder--certificates" data-target="certificates"onclick="toggleFolder(this)">
+          <div class="frame">
+            <div class="frame-bg"></div>
+            <div class="group">
+              <div class="card-right-container">
+                <div class="card-right-inner">
+                  <div class="card-right"></div>
+                </div>
+              </div>
+              <div class="card-left-container">
+                <div class="card-left-inner">
+                  <div class="card-left"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h4>Code Ninjas</h4>
-          <p>Taught coding fundamentals and problem-solving skills to students using structured curricula, translating complex technical concepts into clear, engaging lessons while reinforcing best practices in programming. Collaborated with instructors and leadership to assess student skill levels, track progress, and maintain a safe, supportive learning environment.</p>
-        </div>
-        <div class="experience-card">
-          <h3>Coding Instructor
-            <span class="date">June 2025 - November 2025</span>
-          </h3>
-          <div class="tags">
-            <span class="tag">Teaching</span>
-            <span class="tag">Scratch</span>
-            <span class="tag">Lesson Planning</span>
-            <span class="tag">Interactive Learning</span>
+          <div class="subtract-container">
+            <div class="subtract-inner">
+              <svg class="subtract-svg" fill="none" preserveAspectRatio="none" viewBox="0 0 526.681 374.5">
+                <foreignObject height="389.5" width="536.681" x="-5" y="0">
+                  <div class="blur-overlay" style="clip-path: url(#bgblur_clip_3);" xmlns="http://www.w3.org/1999/xhtml">
+                  </div>
+                </foreignObject>
+                <g filter="url(#filter_shadow_3)">
+                  <path
+                    d="M496.679 25C505.683 25 512.659 32.8774 511.569 41.8154L473.226 356.315C472.308 363.842 465.919 369.5 458.337 369.5H76.5621C69.1263 369.5 62.8132 364.052 61.7242 356.696L15.1646 42.1963C13.8237 33.1363 20.8447 25 30.0035 25H160.743C175.642 56.1586 216.076 78.5 263.62 78.5C311.163 78.4998 351.596 56.1585 366.496 25H496.679Z"
+                    fill="#5EA0FD" fill-opacity="0.5" shape-rendering="crispEdges" />
+                </g>
+                <defs>
+                  <filter id="filter_shadow_3" x="-5" y="0" width="536.681" height="389.5" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="-10" />
+                    <feGaussianBlur stdDeviation="7.5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow" />
+                    <feBlend in="SourceGraphic" in2="effect1_dropShadow" mode="normal" result="shape" />
+                  </filter>
+                  <clipPath id="bgblur_clip_3" transform="translate(5 0)">
+                    <path
+                      d="M496.679 25C505.683 25 512.659 32.8774 511.569 41.8154L473.226 356.315C472.308 363.842 465.919 369.5 458.337 369.5H76.5621C69.1263 369.5 62.8132 364.052 61.7242 356.696L15.1646 42.1963C13.8237 33.1363 20.8447 25 30.0035 25H160.743C175.642 56.1586 216.076 78.5 263.62 78.5C311.163 78.4998 351.596 56.1585 366.496 25H496.679Z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
           </div>
-          <h4>Learn2Code Live</h4>
-          <p>Facilitated engaing and interactive coding lessons for students, utilizing various programming languages and tools to enhance learning experiences and foster technical skills development. Adapted teaching methods to different learning styles and grade levels, ensuring accessibility and comprehension for all students.</p>
-        </div>
-        <div class="experience-card">
-          <h3>Data Science Research Assistant
-            <span class="date">May 2023 - July 2023</span>
-          </h3>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Data Cleaning</span>
-            <span class="tag">Predictive Modeling</span>
-            <span class="tag">Data Visualization</span>
-          </div>
-          <h4>California State University, Fullerton | CIC-PICUBED</h4>
-          <p>Applied Python, pandas, and NumPy to prepare, analyze, and validate data sets for predictive modeling. Conducted research on diabetes risk prediction, ensuring data accuracy, mapping, and integrity throughout the pipeline.</p>
-        </div>
-        <div class="experience-card">
-          <h3>California State University, Fullerton
-            <span class="date">August 2021 - May 2025</span>
-          </h3>
-          <div class="tags">
-            <span class="tag">Algorithms</span>
-            <span class="tag">Data Structures</span>
-            <span class="tag">Databases</span>
-            <span class="tag">Software Engineering</span>
-          </div>
-          <h4>Computer Science</h4>
-          <p>Bachelors of Science</p>
-        </div>
-        <div class="experience-card">
-          <h3>Foundations: Data, Data, Everywhere
-            <span class="date">November 2025</span>
-          </h3>
-          <div class="tags">
-            <span class="tag">Data Analytics</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Data Cleaning</span>
-            <span class="tag">Spreadsheets</span>
-          </div>
-          <h4>Google Coursera</h4>
-          <p>Credential ID:
-            <a href="https://coursera.org/verify/PNK2YSCUROHW" target="_blank" rel="noopener">
-              <span>PNK2YSCUROHW</span>
-            </a>
-          </p>
-        </div>
-        <div class="experience-card">
-          <h3>Ask Questions to Make Data-Driven Decisions
-            <span class="date">March 2026</span>
-          </h3>
-          <div class="tags">
-            <span class="tag">Data Analytics</span>
-            <span class="tag">Stakeholder Communication</span>
-            <span class="tag">Analytical Skills</span>
-            <span class="tag">Data-Driven Decision Making</span>
-          </div>
-          <h4>Google Coursera</h4>
-          <p>Credential ID:
-            <a href="https://coursera.org/verify/M7MQSZOY5ZXG" target="_blank" rel="noopener">
-              <span>M7MQSZOY5ZXG</span>
-            </a>
-          </p>
+          <p class="job-text">Certificates</p>
         </div>
 
       </div>
+      <div class="folder-content">
+        <div class="content-panel" data-content="jobs">
+          <div class="experience-card">
+            <h3>Coding Instructor/Sensei
+              <span class="date">September 2025 - Present</span>
+            </h3>
+            <div class="tags">
+              <span class="tag">Teaching</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Probelm-Solving</span>
+              <span class="tag">Mentoring</span>
+            </div>
+            <h4>Code Ninjas</h4>
+            <p>Taught coding fundamentals and problem-solving skills to students using structured curricula, translating complex
+              technical concepts into clear, engaging lessons while reinforcing best practices in programming. Collaborated with
+              instructors and leadership to assess student skill levels, track progress, and maintain a safe, supportive
+              learning environment.</p>
+          </div>
+          <div class="experience-card">
+            <h3>Coding Instructor
+              <span class="date">June 2025 - November 2025</span>
+            </h3>
+            <div class="tags">
+              <span class="tag">Teaching</span>
+              <span class="tag">Scratch</span>
+              <span class="tag">Lesson Planning</span>
+              <span class="tag">Interactive Learning</span>
+            </div>
+            <h4>Learn2Code Live</h4>
+            <p>Facilitated engaing and interactive coding lessons for students, utilizing various programming languages and
+              tools to enhance learning experiences and foster technical skills development. Adapted teaching methods to
+              different learning styles and grade levels, ensuring accessibility and comprehension for all students.</p>
+          </div>
+          <div class="experience-card">
+            <h3>Data Science Research Assistant
+              <span class="date">May 2023 - July 2023</span>
+            </h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Predictive Modeling</span>
+              <span class="tag">Data Visualization</span>
+            </div>
+            <h4>California State University, Fullerton | CIC-PICUBED</h4>
+            <p>Applied Python, pandas, and NumPy to prepare, analyze, and validate data sets for predictive modeling. Conducted
+              research on diabetes risk prediction, ensuring data accuracy, mapping, and integrity throughout the pipeline.</p>
+          </div>
+        </div>
+        <div class="content-panel" data-content="education">
+          <div class="experience-card">
+            <h3>California State University, Fullerton
+              <span class="date">August 2021 - May 2025</span>
+            </h3>
+            <div class="tags">
+              <span class="tag">Algorithms</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">Databases</span>
+              <span class="tag">Software Engineering</span>
+              <span class="tag">Data Science</span>
+              <span class="tag">Artificial Intelligence</span>
+            </div>
+            <h4>Computer Science</h4>
+            <p>Bachelors of Science</p>
+          </div>
+        </div>
+        <div class="content-panel" data-content="certificates">
+          <div class="experience-card">
+            <h3>Foundations: Data, Data, Everywhere
+              <span class="date">November 2025</span>
+            </h3>
+            <div class="tags">
+              <span class="tag">Data Analytics</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Spreadsheets</span>
+            </div>
+            <h4>Google Coursera</h4>
+            <p>Credential ID:
+              <a href="https://coursera.org/verify/PNK2YSCUROHW" target="_blank" rel="noopener">
+                <span>PNK2YSCUROHW</span>
+              </a>
+            </p>
+          </div>
+          <div class="experience-card">
+            <h3>Ask Questions to Make Data-Driven Decisions
+              <span class="date">March 2026</span>
+            </h3>
+            <div class="tags">
+              <span class="tag">Data Analytics</span>
+              <span class="tag">Stakeholder Communication</span>
+              <span class="tag">Analytical Skills</span>
+              <span class="tag">Data-Driven Decision Making</span>
+            </div>
+            <h4>Google Coursera</h4>
+            <p>Credential ID:
+              <a href="https://coursera.org/verify/M7MQSZOY5ZXG" target="_blank" rel="noopener">
+                <span>M7MQSZOY5ZXG</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </section>
 
@@ -439,7 +624,7 @@
       </div>
 
       <div class="contact-content">
-        <p>I'm always open to new opportunities, collaborations, or just a friendly chat about technology and software development. Feel free to reach out!</p>
+        <p>I'm always open to new opportunities, collaborations, or full-time roles. Feel free to reach out!</p>
 
         <div class="contact-links">
           <a href="mailto:hernandezdesire2025@gmail.com" class="contact-link">
