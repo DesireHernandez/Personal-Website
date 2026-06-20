@@ -52,7 +52,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  height: 80px;
+  height: 70px;
   background-color: var(--background-color);
 }
 
@@ -286,61 +286,243 @@ nav .right select {
   margin-bottom: 100px;
 }
 
-.skills-section .display {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  /* padding: 20px; */
-
-  /* background-color: crimson; */
-}
-
-.skills-section .display .language-card {
-  border: 3px solid var(--text-color);
+.skills-section .section-header h2 {
+  font-size: 34px;
+  font-weight: italic;
   text-align: center;
 }
 
-/* Remove left border from first item in each row */
-.skills-section .display .language-card:nth-child(4n+1) {
-  border-left: none;
-}
-
-/* Remove right border from last item in each row */
-.skills-section .display .language-card:nth-child(4n) {
-  border-right: none;
-}
-
-/* Remove top border from first row & second row */
-.skills-section .display .language-card:nth-child(-n+8) {
-  border-bottom: none;
-  border-right: none;
-}
-
-/* Remove top border from third row */
-.skills-section .display .language-card:nth-child(-n+12) {
-  border-right: none;
-}
-
-.skills-section .display .language {
-  width: 70px;
-  height: 70px;
-  background-color: var(--text-color);
-  border: 3px solid var(--header-color);
-  border-radius: 100%;
-  padding: 15px;
-  margin: 10px 95px 10px 95px;
-}
-
-.skills-section .display .language img {
+.display {
+  position: relative;
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  min-height: 700px;
+}
+
+.bag {
+  width: 40%;
+  margin: 0 auto;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.bag img {
+  width: 100%;
   object-fit: contain;
 }
 
-.skills-section .display .language-card p {
-  font-size: 18px;
-  color: var(--text-color);
+
+.display:hover .pin {
+  transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) scale(1);
+  opacity: 1;
+}
+
+.pin {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translate(0px, 0px) scale(0.2);
+  opacity: 0;
+  transition:
+    transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pin img {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.display:hover .git-pin {
+  transition-delay: 0.00s;
+}
+
+.display:hover .figma-pin {
+  transition-delay: 0.04s;
+}
+
+.display:hover .javascript-pin {
+  transition-delay: 0.08s;
+}
+
+.display:hover .react-pin {
+  transition-delay: 0.12s;
+}
+
+.display:hover .python-pin {
+  transition-delay: 0.16s;
+}
+
+.display:hover .html-pin {
+  transition-delay: 0.20s;
+}
+
+.display:hover .css-pin {
+  transition-delay: 0.24s;
+}
+
+.display:hover .supabase-pin {
+  transition-delay: 0.28s;
+}
+
+.display:hover .node-pin {
+  transition-delay: 0.32s;
+}
+
+.display:hover .mongodb-pin {
+  transition-delay: 0.36s;
+}
+
+.display:hover .sql-pin {
+  transition-delay: 0.40s;
+}
+
+.display:hover .androidstudio-pin {
+  transition-delay: 0.44s;
+}
+
+.git-pin {
+  width: 142px;
+  --tx: -230px;
+  --ty: -260px;
+}
+
+.supabase-pin {
+  width: 179px;
+  --tx: -350px;
+  --ty: -90px;
+}
+
+.css-pin {
+  width: 91px;
+  --tx: -290px;
+  --ty: 50px;
+}
+
+.html-pin {
+  width: 170px;
+  --tx: -330px;
+  --ty: 190px;
+}
+
+.python-pin {
+  width: 170px;
+  --tx: -190px;
+  --ty: 135px;
+  rotate: -17deg;
+}
+
+.react-pin {
+  width: 150px;
+  --tx: 0px;
+  --ty: 290px;
+  rotate: 5deg;
+}
+
+.androidstudio-pin {
+  width: 150px;
+  --tx: 150px;
+  --ty: 260px;
+  rotate: -21deg;
+}
+
+.mongodb-pin {
+  width: 150px;
+  --tx: 390px;
+  --ty: 150px;
+  rotate: 3deg;
+}
+
+.sql-pin {
+  width: 115px;
+  --tx: 280px;
+  --ty: -10px;
+  rotate: 23deg;
+}
+
+.node-pin {
+  width: 150px;
+  --tx: 420px;
+  --ty: -80px;
+  rotate: 12deg;
+}
+
+.javascript-pin {
+  width: 157px;
+  --tx: 370px;
+  --ty: -70px;
+  rotate: -10deg;
+}
+
+.figma-pin {
+  width: 150px;
+  --tx: 230px;
+  --ty: -290px;
+}
+
+.display.pins-active .pin {
+  transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) scale(1);
+  opacity: 1;
+}
+
+.display.pins-active .git-pin {
+  transition-delay: 0.00s;
+}
+
+.display.pins-active .figma-pin {
+  transition-delay: 0.04s;
+}
+
+.display.pins-active .javascript-pin {
+  transition-delay: 0.08s;
+}
+
+.display.pins-active .react-pin {
+  transition-delay: 0.12s;
+}
+
+.display.pins-active .python-pin {
+  transition-delay: 0.16s;
+}
+
+.display.pins-active .html-pin {
+  transition-delay: 0.20s;
+}
+
+.display.pins-active .css-pin {
+  transition-delay: 0.24s;
+}
+
+.display.pins-active .supabase-pin {
+  transition-delay: 0.28s;
+}
+
+.display.pins-active .node-pin {
+  transition-delay: 0.32s;
+}
+
+.display.pins-active .mongodb-pin {
+  transition-delay: 0.36s;
+}
+
+.display.pins-active .sql-pin {
+  transition-delay: 0.40s;
+}
+
+.display.pins-active .androidstudio-pin {
+  transition-delay: 0.44s;
+}
+
+/* A "tap me" hint label only on touch screens */
+.bag-tap-hint {
+  display: none;
 }
 
 /* SECTION 4: WORK */
@@ -898,65 +1080,20 @@ footer {
    DESKTOP BREAKPOINTS
    ============================================ */
 @media (max-width: 1920px) {
-
   /* SECTION 1: Intro */
   .intro-section .portrait img {
     width: 550px;
   }
-
-  /* SECTION 3: SKILLS */
-  .skills-section .display .language-card {
-    padding: 40px;
-  }
-
-  /* SECTION 4: EXPERIENCE*/
-  .experience-section .dots-left,
-  .experience-section .dots-right {
-    width: 600px;
-    height: 600px;
-  }
-
-}
-
-@media (max-width: 1627px) {
-  /* SECTION 3: SKILLS */
-  .skills-section .display {
-    padding: 0px 20px;
-
-    /* background-color: aquamarine; */
-  }
-
-  .skills-section .display .language-card {
-    box-sizing: border-box;
-    width: 25%;
-    max-width: 25%;
-    justify-items: center;
-
-    /* background-color: darksalmon; */
-  }
 }
 
 @media (max-width: 1536px) {
-
   /* SECTION: Intro */
   .intro-section .portrait img {
     width: 525px;
   }
 }
 
-@media (max-width: 1400px) {
-
-  /* SECTION 4: EXPERIENCE*/
-  .experience-section .dots-left,
-  .experience-section .dots-right {
-    width: 500px;
-    height: 500px;
-  }
-
-}
-
 @media (max-width: 1225px) {
-
   /* SECTION 1: INTRO */
   .intro-section .text h1 {
     text-align: center;
@@ -965,7 +1102,6 @@ footer {
   .intro-section .portrait img {
     width: 450px;
   }
-
 }
 
 
@@ -991,49 +1127,82 @@ footer {
   }
 
   /* SECTION 3: SKILLS */
-  .skills-section .display .language-card {
-    box-sizing: border-box;
-    flex: 0 0 16%;
-    width: 16%;
-    max-width: 16%;
-    justify-items: center;
-
-    /* background-color: darksalmon; */
+  .display {
+    min-height: 600px;
   }
 
-  /* Second column - no right border (even numbers: 2, 4, 6...) */
-  .skills-section .display .language-card:nth-child(-n+12) {
-    border-left: 3px solid var(--text-color);
-    /* background-color: lightgreen; */
-  }
+    .git-pin {
+      width: 130px;
+      --tx: -195px;
+      --ty: -220px;
+    }
 
-  .skills-section .display .language-card:nth-child(6n+1) {
-    border-left: none;
+    .supabase-pin {
+      width: 150px;
+      --tx: -295px;
+      --ty: -75px;
+    }
 
-    /* background-color: lightblue; */
-  }
+    .css-pin {
+      width: 78px;
+      --tx: -245px;
+      --ty: 42px;
+    }
 
-  .skills-section .display .language-card:nth-child(n+7) {
-    border-bottom: 3px solid var(--text-color);
+    .html-pin {
+      width: 143px;
+      --tx: -280px;
+      --ty: 160px;
+    }
 
-    /* background-color: lightcoral; */
-  }
+    .python-pin {
+      width: 143px;
+      --tx: -150px;
+      --ty: 100px;
+    }
 
-  .skills-section .display .language {
-    width: 60px;      /* Smaller to fit 6 columns */
-    height: 60px;
-    margin: 8px 10px; /* Less margin */
-    padding: 12px;
+    .react-pin {
+      width: 126px;
+      --tx: 0px;
+      --ty: 225px;
+    }
 
-    /* background-color: wheat; */
-  }
+    .androidstudio-pin {
+      width: 126px;
+      --tx: 120px;
+      --ty: 200px;
+    }
 
-  /* SECTION 4: EXPERIENCE*/
-  .experience-section .dots-left,
-  .experience-section .dots-right {
-    width: 300px;
-    height: 300px;
-  }
+    .mongodb-pin {
+      width: 126px;
+      --tx: 310px;
+      --ty: 120px;
+    }
+
+    .sql-pin {
+      width: 97px;
+      --tx: 200px;
+      --ty: -8px;
+    }
+
+    .node-pin {
+      width: 126px;
+      --tx: 280px;
+      --ty: -70px;
+    }
+
+    .javascript-pin {
+      width: 132px;
+      --tx: 270px;
+      --ty: -95px;
+    }
+
+    .figma-pin {
+      width: 126px;
+      --tx: 195px;
+      --ty: -245px;
+    }
+
   /* SECTION 5: ABOUT */
   .about-section .cells {
     flex-wrap: wrap;  /* Allows items to wrap to next line */
@@ -1051,11 +1220,6 @@ footer {
 
 }
 
-@media (max-width: 930px) {
-
-}
-
-
 /* ============================================
    TABLET BREAKPOINTS
    ============================================ */
@@ -1069,67 +1233,117 @@ footer {
     width: 300px;
   }
 
- /* SECTION 3: SKILLS */
-
- .skills-section {
-   padding: 0px 100px;
-
-   /* background-color: aquamarine; */
- }
-
- .skills-section .display {
-   padding: 0px;
-
-   /* background-color: aquamarine; */
- }
- .skills-section .display .language-card {
-   box-sizing: border-box;
-   flex: 0 0 50%;
-   width: 50%;
-   max-width: 50%;
-   border: 3px solid var(--text-color);
-   padding: 0px;
-
-   /* background-color: darksalmon; */
- }
-
- /* Second column - no right border (even numbers: 2, 4, 6...) */
- .skills-section .display .language-card:nth-child(2n) {
-   border-bottom: none;
-   /* background-color: lightgreen; */
- }
-
- .skills-section .display .language-card:nth-child(2n+1) {
-   border-left: none;
-   border-bottom: none;
-
-   /* background-color: lightblue; */
- }
-
- .skills-section .display .language-card:nth-child(n+11) {
-   border-bottom: 3px solid var(--text-color);
-
-   /* background-color: lightcoral; */
- }
-
- .skills-section .display .language {
-   margin: 5px 5px;
-
-   /* background-color: wheat; */
- }
-
-  /* SECTION 4: EXPERIENCE*/
-  /* .experience-section .dots-left {
-    width: 250px;
-    height: 250px;
+    /* SECTION 3: SKILLS */
+  .display {
+    min-height: 500px;
   }
 
-  .experience-section .dots-right {
-    width: 250px;
-    height: 250px;
-  } */
-}
+  .bag {
+    width: 50%;
+  }
 
+    .git-pin {
+      width: 110px;
+      --tx: -125px;
+      --ty: -170px;
+    }
+
+    .supabase-pin {
+      width: 130px;
+      --tx: -225px;
+      --ty: -75px;
+    }
+
+    .css-pin {
+      width: 78px;
+      --tx: -190px;
+      --ty: 20px;
+    }
+
+    .html-pin {
+      width: 123px;
+      --tx: -250px;
+      --ty: 120px;
+    }
+
+    .python-pin {
+      width: 123px;
+      --tx: -120px;
+      --ty: 80px;
+    }
+
+    .react-pin {
+      width: 106px;
+      --tx: 0px;
+      --ty: 200px;
+    }
+
+    .androidstudio-pin {
+      width: 106px;
+      --tx: 70px;
+      --ty: 160px;
+    }
+
+    .mongodb-pin {
+      width: 106px;
+      --tx: 230px;
+      --ty: 120px;
+    }
+
+    .sql-pin {
+      width: 97px;
+      --tx: 170px;
+      --ty: -8px;
+    }
+
+    .node-pin {
+      width: 106px;
+      --tx: 270px;
+      --ty: -60px;
+    }
+
+    .javascript-pin {
+      width: 112px;
+      --tx: 220px;
+      --ty: -55px;
+    }
+
+    .figma-pin {
+      width: 106px;
+      --tx: 145px;
+      --ty: -190px;
+    }
+
+    /* SECTION 4: WORK EXPERIENCE */
+  .folders-row {
+    /* allow folders to wrap if they ever get too tight, and give breathing room */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .folder {
+    transform: scale(0.82);
+    transform-origin: top center;
+    /* compensate the wrapper's reserved space since scale() doesn't
+       affect layout flow */
+    margin: -18px -22px;
+    }
+
+  .folder-content {
+    width: 90%;
+  }
+
+  .experience-card {
+    margin: 35px 0;
+    padding: 20px;
+  }
+
+  .experience-card h3 {
+    font-size: 24px;
+  }
+
+}
 /* ============================================
    LARGE PHONES BREAKPOINTS
    ============================================ */
@@ -1138,6 +1352,104 @@ footer {
   /* SECTION 1: INTRO */
   .intro-section .text h1 {
     font-size: 34px;
+  }
+
+    /* SECTION 3: SKILLS */
+  .display {
+    min-height: 500px;
+  }
+
+    .git-pin {
+      width: 110px;
+      --tx: -125px;
+      --ty: -170px;
+    }
+
+    .supabase-pin {
+      width: 130px;
+      --tx: -225px;
+      --ty: -75px;
+    }
+
+    .css-pin {
+      width: 78px;
+      --tx: -190px;
+      --ty: 20px;
+    }
+
+    .html-pin {
+      width: 123px;
+      --tx: -250px;
+      --ty: 120px;
+    }
+
+    .python-pin {
+      width: 123px;
+      --tx: -120px;
+      --ty: 80px;
+    }
+
+    .react-pin {
+      width: 106px;
+      --tx: 0px;
+      --ty: 200px;
+    }
+
+    .androidstudio-pin {
+      width: 106px;
+      --tx: 70px;
+      --ty: 160px;
+    }
+
+    .mongodb-pin {
+      width: 106px;
+      --tx: 230px;
+      --ty: 120px;
+    }
+
+    .sql-pin {
+      width: 97px;
+      --tx: 170px;
+      --ty: -8px;
+    }
+
+    .node-pin {
+      width: 106px;
+      --tx: 240px;
+      --ty: -50px;
+    }
+
+    .javascript-pin {
+      width: 112px;
+      --tx: 220px;
+      --ty: -55px;
+    }
+
+    .figma-pin {
+      width: 106px;
+      --tx: 145px;
+      --ty: -190px;
+    }
+
+  /* SECTION 4: WORK EXPERIENCE */
+  .folder {
+    transform: scale(0.74);
+    margin: -27px -32px;
+  }
+
+  .folder-content {
+    width: 100%;
+  }
+
+  .experience-card h3 {
+    font-size: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .experience-card h3 .date {
+    font-size: 15px;
   }
 }
 
@@ -1174,6 +1486,114 @@ footer {
   }
   .work-section .text h3 {
     font-size: 24px;
+  }
+
+      /* SECTION 3: SKILLS */
+  .display {
+    min-height: 400px;
+  }
+
+    .git-pin {
+      width: 90px;
+      --tx: -125px;
+      --ty: -130px;
+    }
+
+    .supabase-pin {
+      width: 120px;
+      --tx: -200px;
+      --ty: -75px;
+    }
+
+    .css-pin {
+      width: 58px;
+      --tx: -150px;
+      --ty: 20px;
+    }
+
+    .html-pin {
+      width: 103px;
+      --tx: -200px;
+      --ty: 100px;
+    }
+
+    .python-pin {
+      width: 103px;
+      --tx: -120px;
+      --ty: 80px;
+    }
+
+    .react-pin {
+      width: 86px;
+      --tx: 0px;
+      --ty: 145px;
+    }
+
+    .androidstudio-pin {
+      width: 86px;
+      --tx: 70px;
+      --ty: 120px;
+    }
+
+    .mongodb-pin {
+      width: 86px;
+      --tx: 190px;
+      --ty: 120px;
+    }
+
+    .sql-pin {
+      width: 77px;
+      --tx: 140px;
+      --ty: -8px;
+    }
+
+    .node-pin {
+      width: 86px;
+      --tx: 200px;
+      --ty: -50px;
+    }
+
+    .javascript-pin {
+      width: 92px;
+      --tx: 200px;
+      --ty: -70px;
+    }
+
+    .figma-pin {
+      width: 86px;
+      --tx: 105px;
+      --ty: -160px;
+    }
+
+  /* SECTION 4: WORK EXPERIENCE */
+.folders-row {
+    gap: 6px;
+  }
+
+  .folder {
+    transform: scale(0.65);
+    margin: -36px -44px;
+  }
+
+  .experience-card {
+    padding: 16px;
+    margin: 25px 0;
+  }
+
+  .experience-card h3 {
+    font-size: 20px;
+  }
+
+  .experience-card h4 {
+    font-size: 16px;
+  }
+
+  .experience-card p {
+    font-size: 15px;
+  }
+
+  .experience-card .tags {
+    flex-wrap: wrap;
   }
 }
 
@@ -1262,85 +1682,99 @@ footer {
     width: 100%;
   }
 
-  /* SECTION 3: SKILLS */
-  .skills-section .text h2 {
-    font-size: 24px;
+      /* SECTION 3: SKILLS */
+
+  .bag {
+    width: 40%;
   }
 
-  .skills-section .text h3 {
-    font-size: 20px;
-  }
+    .git-pin {
+      width: 90px;
+      --tx: -90px;
+      --ty: -120px;
+    }
 
-  .skills-section .display {
-    padding: 0;
-  }
+    .supabase-pin {
+      width: 110px;
+      --tx: -170px;
+      --ty: -75px;
+    }
 
-  .skills-section .display .language-card {
-    padding: 0;
-  }
+    .css-pin {
+      width: 58px;
+      --tx: -120px;
+      --ty: 0px;
+    }
 
-  .skills-section .display .language {
-    width: 50px;
-    height: 50px;
-    margin: 8px 20px;
-    padding: 10px;
-  }
+    .html-pin {
+      width: 103px;
+      --tx: -180px;
+      --ty: 70px;
+    }
 
-  /* SECTION 4: EXPERIENCE */
-  .experience-section {
-    padding: 0 15px;
-  }
+    .python-pin {
+      width: 103px;
+      --tx: -100px;
+      --ty: 60px;
+    }
 
-  .experience-section .text h2 {
-    font-size: 24px;
-  }
+    .react-pin {
+      width: 86px;
+      --tx: 0px;
+      --ty: 120px;
+    }
 
-  .experience-section .text h3 {
-    font-size: 20px;
-  }
+    .androidstudio-pin {
+      width: 86px;
+      --tx: 60px;
+      --ty: 100px;
+    }
 
-  .experience-section .dots-left,
-  .experience-section .dots-right {
-    /* Hide decorative elements */
-    display: none;
-  }
+    .mongodb-pin {
+      width: 86px;
+      --tx: 160px;
+      --ty: 80px;
+    }
 
-  .experience-section .experience-cards {
-    margin: 0;
-    padding: 0 5px;
-  }
+    .sql-pin {
+      width: 77px;
+      --tx: 100px;
+      --ty: -8px;
+    }
 
-  .experience-section .experience-cards .experience-card {
-    padding: 15px;
-    margin: 25px 0;
-  }
+    .node-pin {
+      width: 86px;
+      --tx: 150px;
+      --ty: -50px;
+    }
 
-  .experience-section .experience-cards .experience-card h3 {
-    font-size: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .javascript-pin {
+      width: 92px;
+      --tx: 150px;
+      --ty: -80px;
+    }
 
-  .experience-section .experience-cards .experience-card h3 .date {
-    font-size: 14px;
-    margin-top: 5px;
-  }
+    .figma-pin {
+      width: 86px;
+      --tx: 60px;
+      --ty: -140px;
+    }
 
-  .experience-section .experience-cards .experience-card h4 {
-    font-size: 14px;
-  }
+  /* SECTION 4: WORK EXPERIENCE */
+    .folders-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
 
-  .experience-section .experience-cards .experience-card p {
-    font-size: 14px;
-  }
+    .folder {
+      transform: scale(0.85);
+      margin: -16px 0;
+    }
 
-  .experience-section .experience-cards .experience-card .tags {
-    flex-wrap: wrap;
-  }
-
-  .experience-section .experience-cards .experience-card .tags .tag {
-    font-size: 12px;
-  }
+    .experience-card h3 {
+      font-size: 19px;
+    }
 
   /* SECTION 5: ABOUT */
   .about-section {
@@ -1388,10 +1822,115 @@ footer {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
     /* NAVBAR */
   nav {
     padding: 0 10px;
     height: 60px;
+  }
+
+       /* SECTION 3: SKILLS */
+  .display {
+    min-height: 400px;
+    background-color: beige;
+  }
+
+  .bag {
+    width: 70%;
+    background-color: aquamarine;
+  }
+
+    .git-pin {
+      width: 70px;
+      --tx: -50px;
+      --ty: -130px;
+    }
+
+    .supabase-pin {
+      width: 70px;
+      --tx: -100px;
+      --ty: -100px;
+    }
+
+    .css-pin {
+      width: 50px;
+      --tx: -100px;
+      --ty: -50px;
+    }
+
+    .html-pin {
+      width: 70px;
+      --tx: -110px;
+      --ty: 0px;
+    }
+
+    .python-pin {
+      width: 70px;
+      --tx: -90px;
+      --ty: 20px;
+    }
+
+    .react-pin {
+      width: 70px;
+      --tx: -40px;
+      --ty: 100px;
+    }
+
+    .androidstudio-pin {
+      width: 70px;
+      --tx: 0px;
+      --ty: 90px;
+    }
+
+    .mongodb-pin {
+      width: 70px;
+      --tx: 80px;
+      --ty: 60px;
+    }
+
+    .sql-pin {
+      width: 70px;
+      --tx: 90px;
+      --ty: -10px;
+    }
+
+    .node-pin {
+      width: 70px;
+      --tx: 90px;
+      --ty: -70px;
+    }
+
+    .javascript-pin {
+      width: 70px;
+      --tx: 100px;
+      --ty: -100px;
+    }
+
+    .figma-pin {
+      width: 70px;
+      --tx: 20px;
+      --ty: -130px;
+    }
+
+  /* SECTION 4" WORK EXPERIENCE */
+  .folder {
+    transform: scale(0.72);
+    margin: -29px 0;
+  }
+
+  .experience-card {
+    padding: 14px;
+  }
+
+  .experience-card h3 {
+    font-size: 17px;
+  }
+
+  .experience-card p {
+    font-size: 14px;
+  }
+
+  .experience-card .tags .tag {
+    font-size: 12px;
   }
 }
