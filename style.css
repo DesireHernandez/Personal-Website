@@ -729,18 +729,11 @@ nav .right select {
 }
 
 .experience-card {
-  /* background-color: deeppink; */
   border: 3px solid var(--text-color);
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   margin: 50px 0px;
   padding: 25px;
-
-  /* transform: translateY(-10px);
-  opacity: 0;
-  transition:
-    transform 0.4s ease,
-    opacity 0.3s ease; */
 }
 
 .experience-card h3 {
@@ -1111,10 +1104,6 @@ footer {
 @media (max-width: 1100px) {
 
   /* SECTION 1: INTRO */
-  /* .intro-section {
-    flex-direction: column-reverse;
-    gap: 0px;
-  } */
 
   .intro-section .portrait img {
     width: 400px;
@@ -1227,10 +1216,16 @@ footer {
   /* SECTION 1: INTRO */
   .intro-section {
     flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .intro-section .text {
+    max-width: 100%;
   }
 
   .intro-section .portrait img {
-    width: 300px;
+    width: 260px;
   }
 
     /* SECTION 3: SKILLS */
@@ -1316,19 +1311,22 @@ footer {
 
     /* SECTION 4: WORK EXPERIENCE */
   .folders-row {
-    /* allow folders to wrap if they ever get too tight, and give breathing room */
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* keep side by side but scaled */
   }
 
   .folder {
-    transform: scale(0.82);
+    transform: scale(0.78);
     transform-origin: top center;
-    /* compensate the wrapper's reserved space since scale() doesn't
-       affect layout flow */
-    margin: -18px -22px;
-    }
+    margin: -24px -26px;
+    isolation: isolate;
+  }
+
+  .folder:hover,
+  .folder.active {
+    transform: translateY(-3px) scale(0.78);
+  }
 
   .folder-content {
     width: 90%;
@@ -1343,6 +1341,10 @@ footer {
     font-size: 24px;
   }
 
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
 }
 /* ============================================
    LARGE PHONES BREAKPOINTS
@@ -1352,6 +1354,14 @@ footer {
   /* SECTION 1: INTRO */
   .intro-section .text h1 {
     font-size: 34px;
+  }
+
+  .intro-section .text p {
+    font-size: 16px;
+  }
+
+  .intro-section .portrait img {
+    width: 220px;
   }
 
     /* SECTION 3: SKILLS */
@@ -1434,11 +1444,28 @@ footer {
   /* SECTION 4: WORK EXPERIENCE */
   .folder {
     transform: scale(0.74);
+    transform-origin: top center;
     margin: -27px -32px;
+    isolation: isolate;
+  }
+
+  .folder:hover,
+  .folder.active {
+    transform: translateY(-3px) scale(0.74);
+  }
+
+  /* Reduce card fly-up so it doesn't overlap sibling folders */
+  .folder.active .group {
+    transform: translateY(-55px);
   }
 
   .folder-content {
     width: 100%;
+  }
+
+  /* Fix cards being cut off */
+  .content-panel.active {
+    max-height: 3000px;
   }
 
   .experience-card h3 {
@@ -1471,13 +1498,28 @@ footer {
   }
 
   /* SECTION 1: INTRO */
-  .intro-section {
+.intro-section {
     padding: 0 20px;
-    gap: 0px;
+    gap: 0;
+    margin: 20px auto 60px;
+  }
+
+  .intro-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
   }
 
   .intro-section .text h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .intro-section .text p {
+    font-size: 15px;
+  }
+
+  .intro-section .portrait img {
+    width: 200px;
   }
 
   /* SECTION 2: FEAT. WORK */
@@ -1567,12 +1609,25 @@ footer {
 
   /* SECTION 4: WORK EXPERIENCE */
 .folders-row {
-    gap: 6px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
   .folder {
-    transform: scale(0.65);
-    margin: -36px -44px;
+    transform: scale(0.72);
+    transform-origin: top center;
+    margin: -22px 0;
+    isolation: isolate;
+  }
+
+  .folder:hover,
+  .folder.active {
+    transform: translateY(-2px) scale(0.72);
+  }
+
+  .folder.active .group {
+    transform: translateY(-100px);
   }
 
   .experience-card {
@@ -1582,6 +1637,9 @@ footer {
 
   .experience-card h3 {
     font-size: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .experience-card h4 {
@@ -1623,21 +1681,15 @@ footer {
   /* SECTION 1: INTRO */
   .intro-section {
     padding: 0 15px;
-    margin: 20px auto 60px;
-    flex-direction: column-reverse;
-  }
-
-  .intro-section .text {
-    padding: 5px;
+    margin: 20px auto 50px;
   }
 
   .intro-section .text h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .intro-section .text p {
     font-size: 14px;
-    max-width: 100%;
   }
 
   .intro-section .text h4 {
@@ -1651,6 +1703,10 @@ footer {
   .intro-section .text .links a {
     font-size: 14px;
     padding: 6px 15px;
+  }
+
+  .intro-section .portrait img {
+    width: 180px;
   }
 
   /* SECTION 2: FEATURED WORK */
@@ -1761,20 +1817,28 @@ footer {
     }
 
   /* SECTION 4: WORK EXPERIENCE */
-    .folders-row {
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
+  .folder {
+    transform: scale(0.7);
+    transform-origin: top center;
+    margin: -28px 0;
+  }
 
-    .folder {
-      transform: scale(0.85);
-      margin: -16px 0;
-    }
+  .folder:hover,
+  .folder.active {
+    transform: translateY(-2px) scale(0.7);
+  }
 
-    .experience-card h3 {
-      font-size: 19px;
-    }
+  .folder-content {
+    width: 100%;
+  }
+
+  .content-panel.active {
+    max-height: 3000px;
+  }
+
+  .experience-card h3 {
+    font-size: 19px;
+  }
 
   /* SECTION 5: ABOUT */
   .about-section {
@@ -1829,15 +1893,22 @@ footer {
     height: 60px;
   }
 
+  /* SECTION 1: INTRO */
+  .intro-section .text h1 {
+    font-size: 20px;
+  }
+
+  .intro-section .portrait img {
+    width: 160px;
+  }
+
        /* SECTION 3: SKILLS */
   .display {
     min-height: 400px;
-    background-color: beige;
   }
 
   .bag {
     width: 70%;
-    background-color: aquamarine;
   }
 
     .git-pin {
@@ -1914,8 +1985,14 @@ footer {
 
   /* SECTION 4" WORK EXPERIENCE */
   .folder {
-    transform: scale(0.72);
-    margin: -29px 0;
+    transform: scale(0.65);
+    transform-origin: top center;
+    margin: -6px 0;
+  }
+
+  .folder:hover,
+  .folder.active {
+    transform: translateY(-2px) scale(0.65);
   }
 
   .experience-card {
