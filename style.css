@@ -589,6 +589,14 @@ nav .right select {
   transform: translateY(-4px);
 }
 
+.folder:hover .job-text {
+  color: var(--link-color);
+}
+
+.folder.active .job-text {
+  color: var(--link-color);
+}
+
 .folder.active .folder-image {
   transform: translateY(-4px);
 }
